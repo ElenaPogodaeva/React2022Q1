@@ -1,0 +1,32 @@
+.header {
+  background: #ebebeb;
+}
+.headerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.menuList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuLink {
+  display: block;
+  font-size: 20px;
+  color: #464549;
+  
+  text-decoration: none;
+  padding: 20px;
+  transition: .3s;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.menuLink:hover {
+  color: #24C5DB;
+}
