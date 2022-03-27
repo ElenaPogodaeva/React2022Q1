@@ -1,0 +1,84 @@
+
+.card {
+  width: calc(25% - 30px);
+  min-width: 200px;
+  //height: 500px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #29244e;
+  font-size: 1.1rem;
+  line-height: 26px;
+  transition: all 0.3s ease-in-out;
+  margin: 15px;
+  cursor: pointer;
+  //display: flex;
+  //flex-direction: column;
+  //align-items: center;
+  //justify-content: flex-start;
+  //padding: 0 20px;
+}
+.card:hover {
+  transform: scale(1.008);
+  box-shadow: 1px 3px 4px rgb(0 0 0 / 20%);
+}
+.cardImg {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.cardBody {
+  padding: 10px 20px 20px;
+}
+
+.cardDateViewWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cardSubtitle {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.54);
+  margin-bottom: 15px;
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.cardOwner {
+  font-size: .8rem;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.cardDate,
+.cardViews {
+  font-size: .8rem;
+}
+@media(max-width: 1150px) {
+  .card {
+    width: calc(33.33% - 30px);
+  }
+}
+@media(max-width: 900px) {
+  .card {
+    width: calc(50% - 30px);
+    //height: 400px;
+  }
+  .teamCard {
+    width: calc(100% - 30px);
+    //height: 250px;
+  }
+}
+@media(max-width: 600px) {
+  .card {
+    width: calc(100% - 30px);
+    //height: 200px;
+    justify-content: center;
+  }
+}
