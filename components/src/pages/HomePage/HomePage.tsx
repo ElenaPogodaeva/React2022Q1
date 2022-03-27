@@ -2,11 +2,7 @@ import React from 'react';
 import Header from '../../components/Layout/Layout';
 
 const HomePage = () => {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+  return <div>HomePage</div>;
 };
 
 export default HomePage;
