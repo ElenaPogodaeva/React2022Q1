@@ -1,0 +1,35 @@
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: #F0F0F0;
+}
+
+.searchbarInput {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 18px;
+  border: 1px solid gray;
+  min-width: 300px;
+}
+
+.searchbarBtn {
+  padding: 5px 20px;
+  font-size: 18px;
+  border-radius: 20px;
+  background: #42b983;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin-left: 1rem;
+}
+@media (max-width: 549px) {
+  .searchbar {
+    width: 100%;
+  }
+  .searchbarInput {
+    min-width: 0;
+    width: 100%;
+  }
+}
