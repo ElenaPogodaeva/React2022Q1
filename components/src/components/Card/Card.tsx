@@ -15,12 +15,12 @@ type CardProps = {
 };
 
 type CardState = Record<string, never>;
-
+//`../../assets/img/${this.props.id}.jpg`
 class Card extends React.Component<CardProps, CardState> {
   render() {
     return (
       <div className={style.card}>
-        <img src={require(`../../assets/img/${this.props.id}.jpg`)} className={style.cardImg}></img>
+        <img src={require(`../../../public/img/${this.props.id}.jpg`)} className={style.cardImg} />
         <div className={style.cardBody}>
           <p className={style.cardTitle}>{this.props.title}</p>
           <p className={style.cardOwner}>By {this.props.author}</p>
