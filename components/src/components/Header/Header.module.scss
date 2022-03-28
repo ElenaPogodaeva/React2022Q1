@@ -1,5 +1,5 @@
 .header {
-  background: #ebebeb;
+  background: #25263a;
 }
 .headerContainer {
   max-width: 1200px;
@@ -19,14 +19,17 @@
 .menuLink {
   display: block;
   font-size: 20px;
-  color: #464549;
+  color: #ffffff;
   
   text-decoration: none;
-  padding: 20px;
+  padding: 10px;
   transition: .3s;
   margin-right: 30px;
   cursor: pointer;
 }
 .menuLink:hover {
+  color: #24C5DB;
+}
+.active {
   color: #24C5DB;
 }
