@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/elenapogodaeva-JSFE2021Q3/react-components/static/css/main.03b226d6.css",
-    "main.js": "/elenapogodaeva-JSFE2021Q3/react-components/static/js/main.961ccd45.js",
-    "static/js/787.3c167a06.chunk.js": "/elenapogodaeva-JSFE2021Q3/react-components/static/js/787.3c167a06.chunk.js",
-    "static/media/4.jpg": "/elenapogodaeva-JSFE2021Q3/react-components/static/media/4.c7938e3df77431a435dd.jpg",
-    "static/media/2.jpg": "/elenapogodaeva-JSFE2021Q3/react-components/static/media/2.9875b2309d3bc1d5f294.jpg",
-    "static/media/8.jpg": "/elenapogodaeva-JSFE2021Q3/react-components/static/media/8.de45e9010819dbf9e6dc.jpg",
-    "static/media/3.jpg": "/elenapogodaeva-JSFE2021Q3/react-components/static/media/3.b76c57f16d87c4adb4de.jpg",
-    "static/media/1.jpg": "/elenapogodaeva-JSFE2021Q3/react-components/static/media/1.b20f03bc7d2894ee617a.jpg",
-    "static/media/5.jpg": "/elenapogodaeva-JSFE2021Q3/react-components/static/media/5.f5cc3191990d4ec128f9.jpg",
-    "static/media/6.jpg": "/elenapogodaeva-JSFE2021Q3/react-components/static/media/6.5614580570f6fcf691ae.jpg",
-    "static/media/7.jpg": "/elenapogodaeva-JSFE2021Q3/react-components/static/media/7.a4d4a45d547afc4273e5.jpg",
-    "static/media/rs.svg": "/elenapogodaeva-JSFE2021Q3/react-components/static/media/rs.c472b3043a1e36419eea.svg",
-    "index.html": "/elenapogodaeva-JSFE2021Q3/react-components/index.html",
-    "main.03b226d6.css.map": "/elenapogodaeva-JSFE2021Q3/react-components/static/css/main.03b226d6.css.map",
-    "main.961ccd45.js.map": "/elenapogodaeva-JSFE2021Q3/react-components/static/js/main.961ccd45.js.map",
-    "787.3c167a06.chunk.js.map": "/elenapogodaeva-JSFE2021Q3/react-components/static/js/787.3c167a06.chunk.js.map"
+    "main.css": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/css/main.9f3d5aa8.css",
+    "main.js": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/js/main.34670900.js",
+    "static/js/787.3c167a06.chunk.js": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/js/787.3c167a06.chunk.js",
+    "static/media/4.jpg": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/media/4.c7938e3df77431a435dd.jpg",
+    "static/media/2.jpg": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/media/2.9875b2309d3bc1d5f294.jpg",
+    "static/media/8.jpg": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/media/8.de45e9010819dbf9e6dc.jpg",
+    "static/media/3.jpg": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/media/3.b76c57f16d87c4adb4de.jpg",
+    "static/media/1.jpg": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/media/1.b20f03bc7d2894ee617a.jpg",
+    "static/media/5.jpg": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/media/5.f5cc3191990d4ec128f9.jpg",
+    "static/media/6.jpg": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/media/6.5614580570f6fcf691ae.jpg",
+    "static/media/7.jpg": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/media/7.a4d4a45d547afc4273e5.jpg",
+    "static/media/rs.svg": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/media/rs.c472b3043a1e36419eea.svg",
+    "index.html": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/index.html",
+    "main.9f3d5aa8.css.map": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/css/main.9f3d5aa8.css.map",
+    "main.34670900.js.map": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/js/main.34670900.js.map",
+    "787.3c167a06.chunk.js.map": "/rolling-scopes-school/elenapogodaeva-REACT2022Q1/react-components/static/js/787.3c167a06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03b226d6.css",
-    "static/js/main.961ccd45.js"
+    "static/css/main.9f3d5aa8.css",
+    "static/js/main.34670900.js"
   ]
 }
