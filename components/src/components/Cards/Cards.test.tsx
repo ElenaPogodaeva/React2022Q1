@@ -1,6 +1,5 @@
-import React from 'react';
-import Cards from '../../components/Cards/Cards';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import { render } from '@testing-library/react';
+import Cards from './Cards';
 
 const propsValues = [
   {
@@ -93,49 +92,23 @@ const propsValues = [
   },
 ];
 
-type HomePageProps = Record<string, never>; //{
-// props: Record<string, never>;
-//};
-type HomePageState = {
-  searchValue: string;
-};
-
-class HomePage extends React.Component<HomePageProps, HomePageState> {
-  constructor(props: HomePageProps) {
-    super(props);
-    this.state = {
-      searchValue: '',
-    };
-    this.handleSearchBarChange = this.handleSearchBarChange.bind(this);
-  }
-
-  handleSearchBarChange(value: string) {
-    this.setState({ searchValue: value });
-  }
-
-  componentDidMount() {
-    const localStorageValue = localStorage.getItem('searchValue');
-    //this.setState({ searchValue: localStorage.getItem('searchValue') || '' });
-    if (localStorageValue) {
-      this.setState({ searchValue: localStorageValue });
-    }
-  }
-
-  componentWillUnmount() {
-    localStorage.setItem('searchValue', this.state.searchValue);
-  }
-
-  render() {
-    return (
-      <div data-testid="home-page">
-        <SearchBar
-          searchValue={this.state.searchValue}
-          onSearchBarChange={this.handleSearchBarChange}
-        />
-        <Cards cards={propsValues} />
-      </div>
-    );
-  }
-}
-
-export default HomePage;
+describe('Cards component', () => {
+  it('Cards renders', () => {
+    const { getByTestId } = render(<Cards cards={propsValues} />);
+    const cards = getByTestId('cards');
+    expect(cards).toBeDefined();
+  });
+  it('Cards renders without data', () => {
+    const { queryByTestId } = render(<Cards cards={[]} />);
+    const cards = queryByTestId('cards');
+    expect(cards).toBeNull();
+  });
+  it('Cards snapshot', () => {
+    const cards = render(<Cards cards={propsValues} />);
+    expect(cards).toMatchSnapshot();
+  });
+  it('Cards empty snapshot', () => {
+    const cards = render(<Cards cards={[]} />);
+    expect(cards).toMatchSnapshot();
+  });
+});

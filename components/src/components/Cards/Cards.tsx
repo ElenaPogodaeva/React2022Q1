@@ -25,11 +25,12 @@ type CardsState = {
 
 class Cards extends React.Component<CardsProps, CardsState> {
   render() {
+    if (!this.props.cards.length) return null;
+
     return (
-      <div className={style.cards}>
-        {this.props.cards.map((card) => (
-          <Card key={this.props.cards.indexOf(card)} {...card} />
-        ))}
+      <div className={style.cards} data-testid="cards">
+        {this.props.cards &&
+          this.props.cards.map((card) => <Card key={this.props.cards.indexOf(card)} {...card} />)}
       </div>
     );
   }

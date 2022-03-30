@@ -1,0 +1,759 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cards component Cards empty snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div />
+  </body>,
+  "container": <div />,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Cards component Cards snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="cards"
+        data-testid="cards"
+      >
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="1.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              Portrait of a cat looking at the camera
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              Lloyd Henneman
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                March 26th, 2022
+              </p>
+              <p
+                class="cardViews"
+              >
+                Views: 
+                1000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="2.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              Gray cat
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              Max Baskakov
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                March 26th, 2022
+              </p>
+              <p
+                class="cardViews"
+              >
+                Views: 
+                1000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="3.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              Stretching in the morning
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              Timo Volz
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                March 26th, 2022
+              </p>
+              <p
+                class="cardViews"
+              >
+                Views: 
+                1000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="4.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              Gray cat with flowers
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              Milada Vigerova
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                March 28th, 2022
+              </p>
+              <p
+                class="cardViews"
+              >
+                Views: 
+                1000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="5.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              Kitten
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              Alvan Nee
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                March 28th, 2022
+              </p>
+              <p
+                class="cardViews"
+              >
+                Views: 
+                1000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="6.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              Two kittens sitting in a basket
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              Amy Baugess
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                March 28th, 2022
+              </p>
+              <p
+                class="cardViews"
+              >
+                Views: 
+                1000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="7.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              Red cat lying on a wooden floor
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              Michael Sum
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                March 28th, 2022
+              </p>
+              <p
+                class="cardViews"
+              >
+                Views: 
+                1000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="8.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              Yawn cat
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              Loan
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                March 28th, 2022
+              </p>
+              <p
+                class="cardViews"
+              >
+                Views: 
+                1000
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="cards"
+      data-testid="cards"
+    >
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="1.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            Portrait of a cat looking at the camera
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            Lloyd Henneman
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              March 26th, 2022
+            </p>
+            <p
+              class="cardViews"
+            >
+              Views: 
+              1000
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="2.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            Gray cat
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            Max Baskakov
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              March 26th, 2022
+            </p>
+            <p
+              class="cardViews"
+            >
+              Views: 
+              1000
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="3.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            Stretching in the morning
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            Timo Volz
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              March 26th, 2022
+            </p>
+            <p
+              class="cardViews"
+            >
+              Views: 
+              1000
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="4.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            Gray cat with flowers
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            Milada Vigerova
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              March 28th, 2022
+            </p>
+            <p
+              class="cardViews"
+            >
+              Views: 
+              1000
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="5.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            Kitten
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            Alvan Nee
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              March 28th, 2022
+            </p>
+            <p
+              class="cardViews"
+            >
+              Views: 
+              1000
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="6.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            Two kittens sitting in a basket
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            Amy Baugess
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              March 28th, 2022
+            </p>
+            <p
+              class="cardViews"
+            >
+              Views: 
+              1000
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="7.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            Red cat lying on a wooden floor
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            Michael Sum
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              March 28th, 2022
+            </p>
+            <p
+              class="cardViews"
+            >
+              Views: 
+              1000
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="8.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            Yawn cat
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            Loan
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              March 28th, 2022
+            </p>
+            <p
+              class="cardViews"
+            >
+              Views: 
+              1000
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
