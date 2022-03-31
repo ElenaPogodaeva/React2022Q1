@@ -30,7 +30,7 @@ class Cards extends React.Component<CardsProps, CardsState> {
     return (
       <div className={style.cards} data-testid="cards">
         {this.props.cards &&
-          this.props.cards.map((card) => <Card key={this.props.cards.indexOf(card)} {...card} />)}
+          this.props.cards.map((card) => <Card key={card.id} {...card} />)}
       </div>
     );
   }

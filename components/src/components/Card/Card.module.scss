@@ -13,8 +13,8 @@
   transition: all 0.3s ease-in-out;
   margin: 15px;
   cursor: pointer;
-  // display: flex;
-  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
   // align-items: center;
   // justify-content: flex-start;
   //padding: 0 20px;
@@ -31,20 +31,19 @@
 }
 .cardBody {
   padding: 10px 20px 20px;
-}
-
-.cardDateViewWrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
+  flex-direction: column;
+  height: 100%;
 }
 
-.cardSubtitle {
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.54);
-  margin-bottom: 15px;
-}
+// .cardDateViewWrapper {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   margin: 10px 0;
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+// }
 
 .cardTitle {
   margin-bottom: 5px;
@@ -53,10 +52,40 @@
 .cardOwner {
   font-size: .8rem;
   color: rgba(0, 0, 0, 0.54);
+  margin-bottom: 10px;
 }
 
-.cardDate,
-.cardViews {
+.cardStatistics {
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.statisticsItem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.statisticsImg {
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+.statisticsViews {
+  background-image: url(../../../public/svg/viewed.svg);
+}
+.statisticsLikes {
+  background-image: url(../../../public/svg/liked.svg);
+}
+.statisticsComments {
+  background-image: url(../../../public/svg/comments.svg);
+}
+
+.cardDate {
   font-size: .8rem;
 }
 @media(max-width: 1150px) {

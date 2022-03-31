@@ -92,20 +92,38 @@ Object {
               By 
               Lloyd Henneman
             </p>
-            <div
-              class="cardDateViewWrapper"
+            <p
+              class="cardDate"
             >
-              <p
-                class="cardDate"
+              March 26th, 2022
+            </p>
+            <div
+              class="cardStatistics"
+            >
+              <div
+                class="statisticsItem"
               >
-                March 26th, 2022
-              </p>
-              <p
-                class="cardViews"
-              >
-                Views: 
+                <div
+                  class="statisticsImg statisticsViews"
+                />
                 1000
-              </p>
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsLikes"
+                />
+                500
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsComments"
+                />
+                100
+              </div>
             </div>
           </div>
         </div>
@@ -131,20 +149,38 @@ Object {
               By 
               Max Baskakov
             </p>
-            <div
-              class="cardDateViewWrapper"
+            <p
+              class="cardDate"
             >
-              <p
-                class="cardDate"
+              March 26th, 2022
+            </p>
+            <div
+              class="cardStatistics"
+            >
+              <div
+                class="statisticsItem"
               >
-                March 26th, 2022
-              </p>
-              <p
-                class="cardViews"
-              >
-                Views: 
+                <div
+                  class="statisticsImg statisticsViews"
+                />
                 1000
-              </p>
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsLikes"
+                />
+                500
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsComments"
+                />
+                100
+              </div>
             </div>
           </div>
         </div>
@@ -170,20 +206,38 @@ Object {
               By 
               Timo Volz
             </p>
-            <div
-              class="cardDateViewWrapper"
+            <p
+              class="cardDate"
             >
-              <p
-                class="cardDate"
+              March 26th, 2022
+            </p>
+            <div
+              class="cardStatistics"
+            >
+              <div
+                class="statisticsItem"
               >
-                March 26th, 2022
-              </p>
-              <p
-                class="cardViews"
-              >
-                Views: 
+                <div
+                  class="statisticsImg statisticsViews"
+                />
                 1000
-              </p>
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsLikes"
+                />
+                500
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsComments"
+                />
+                100
+              </div>
             </div>
           </div>
         </div>
@@ -209,20 +263,38 @@ Object {
               By 
               Milada Vigerova
             </p>
-            <div
-              class="cardDateViewWrapper"
+            <p
+              class="cardDate"
             >
-              <p
-                class="cardDate"
+              March 28th, 2022
+            </p>
+            <div
+              class="cardStatistics"
+            >
+              <div
+                class="statisticsItem"
               >
-                March 28th, 2022
-              </p>
-              <p
-                class="cardViews"
-              >
-                Views: 
+                <div
+                  class="statisticsImg statisticsViews"
+                />
                 1000
-              </p>
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsLikes"
+                />
+                500
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsComments"
+                />
+                100
+              </div>
             </div>
           </div>
         </div>
@@ -248,20 +320,38 @@ Object {
               By 
               Alvan Nee
             </p>
-            <div
-              class="cardDateViewWrapper"
+            <p
+              class="cardDate"
             >
-              <p
-                class="cardDate"
+              March 28th, 2022
+            </p>
+            <div
+              class="cardStatistics"
+            >
+              <div
+                class="statisticsItem"
               >
-                March 28th, 2022
-              </p>
-              <p
-                class="cardViews"
-              >
-                Views: 
+                <div
+                  class="statisticsImg statisticsViews"
+                />
                 1000
-              </p>
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsLikes"
+                />
+                500
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsComments"
+                />
+                100
+              </div>
             </div>
           </div>
         </div>
@@ -287,20 +377,38 @@ Object {
               By 
               Amy Baugess
             </p>
-            <div
-              class="cardDateViewWrapper"
+            <p
+              class="cardDate"
             >
-              <p
-                class="cardDate"
+              March 28th, 2022
+            </p>
+            <div
+              class="cardStatistics"
+            >
+              <div
+                class="statisticsItem"
               >
-                March 28th, 2022
-              </p>
-              <p
-                class="cardViews"
-              >
-                Views: 
+                <div
+                  class="statisticsImg statisticsViews"
+                />
                 1000
-              </p>
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsLikes"
+                />
+                500
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsComments"
+                />
+                100
+              </div>
             </div>
           </div>
         </div>
@@ -326,20 +434,38 @@ Object {
               By 
               Michael Sum
             </p>
-            <div
-              class="cardDateViewWrapper"
+            <p
+              class="cardDate"
             >
-              <p
-                class="cardDate"
+              March 28th, 2022
+            </p>
+            <div
+              class="cardStatistics"
+            >
+              <div
+                class="statisticsItem"
               >
-                March 28th, 2022
-              </p>
-              <p
-                class="cardViews"
-              >
-                Views: 
+                <div
+                  class="statisticsImg statisticsViews"
+                />
                 1000
-              </p>
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsLikes"
+                />
+                500
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsComments"
+                />
+                100
+              </div>
             </div>
           </div>
         </div>
@@ -365,20 +491,38 @@ Object {
               By 
               Loan
             </p>
-            <div
-              class="cardDateViewWrapper"
+            <p
+              class="cardDate"
             >
-              <p
-                class="cardDate"
+              March 28th, 2022
+            </p>
+            <div
+              class="cardStatistics"
+            >
+              <div
+                class="statisticsItem"
               >
-                March 28th, 2022
-              </p>
-              <p
-                class="cardViews"
-              >
-                Views: 
+                <div
+                  class="statisticsImg statisticsViews"
+                />
                 1000
-              </p>
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsLikes"
+                />
+                500
+              </div>
+              <div
+                class="statisticsItem"
+              >
+                <div
+                  class="statisticsImg statisticsComments"
+                />
+                100
+              </div>
             </div>
           </div>
         </div>
@@ -412,20 +556,38 @@ Object {
             By 
             Lloyd Henneman
           </p>
-          <div
-            class="cardDateViewWrapper"
+          <p
+            class="cardDate"
           >
-            <p
-              class="cardDate"
+            March 26th, 2022
+          </p>
+          <div
+            class="cardStatistics"
+          >
+            <div
+              class="statisticsItem"
             >
-              March 26th, 2022
-            </p>
-            <p
-              class="cardViews"
-            >
-              Views: 
+              <div
+                class="statisticsImg statisticsViews"
+              />
               1000
-            </p>
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsLikes"
+              />
+              500
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsComments"
+              />
+              100
+            </div>
           </div>
         </div>
       </div>
@@ -451,20 +613,38 @@ Object {
             By 
             Max Baskakov
           </p>
-          <div
-            class="cardDateViewWrapper"
+          <p
+            class="cardDate"
           >
-            <p
-              class="cardDate"
+            March 26th, 2022
+          </p>
+          <div
+            class="cardStatistics"
+          >
+            <div
+              class="statisticsItem"
             >
-              March 26th, 2022
-            </p>
-            <p
-              class="cardViews"
-            >
-              Views: 
+              <div
+                class="statisticsImg statisticsViews"
+              />
               1000
-            </p>
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsLikes"
+              />
+              500
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsComments"
+              />
+              100
+            </div>
           </div>
         </div>
       </div>
@@ -490,20 +670,38 @@ Object {
             By 
             Timo Volz
           </p>
-          <div
-            class="cardDateViewWrapper"
+          <p
+            class="cardDate"
           >
-            <p
-              class="cardDate"
+            March 26th, 2022
+          </p>
+          <div
+            class="cardStatistics"
+          >
+            <div
+              class="statisticsItem"
             >
-              March 26th, 2022
-            </p>
-            <p
-              class="cardViews"
-            >
-              Views: 
+              <div
+                class="statisticsImg statisticsViews"
+              />
               1000
-            </p>
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsLikes"
+              />
+              500
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsComments"
+              />
+              100
+            </div>
           </div>
         </div>
       </div>
@@ -529,20 +727,38 @@ Object {
             By 
             Milada Vigerova
           </p>
-          <div
-            class="cardDateViewWrapper"
+          <p
+            class="cardDate"
           >
-            <p
-              class="cardDate"
+            March 28th, 2022
+          </p>
+          <div
+            class="cardStatistics"
+          >
+            <div
+              class="statisticsItem"
             >
-              March 28th, 2022
-            </p>
-            <p
-              class="cardViews"
-            >
-              Views: 
+              <div
+                class="statisticsImg statisticsViews"
+              />
               1000
-            </p>
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsLikes"
+              />
+              500
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsComments"
+              />
+              100
+            </div>
           </div>
         </div>
       </div>
@@ -568,20 +784,38 @@ Object {
             By 
             Alvan Nee
           </p>
-          <div
-            class="cardDateViewWrapper"
+          <p
+            class="cardDate"
           >
-            <p
-              class="cardDate"
+            March 28th, 2022
+          </p>
+          <div
+            class="cardStatistics"
+          >
+            <div
+              class="statisticsItem"
             >
-              March 28th, 2022
-            </p>
-            <p
-              class="cardViews"
-            >
-              Views: 
+              <div
+                class="statisticsImg statisticsViews"
+              />
               1000
-            </p>
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsLikes"
+              />
+              500
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsComments"
+              />
+              100
+            </div>
           </div>
         </div>
       </div>
@@ -607,20 +841,38 @@ Object {
             By 
             Amy Baugess
           </p>
-          <div
-            class="cardDateViewWrapper"
+          <p
+            class="cardDate"
           >
-            <p
-              class="cardDate"
+            March 28th, 2022
+          </p>
+          <div
+            class="cardStatistics"
+          >
+            <div
+              class="statisticsItem"
             >
-              March 28th, 2022
-            </p>
-            <p
-              class="cardViews"
-            >
-              Views: 
+              <div
+                class="statisticsImg statisticsViews"
+              />
               1000
-            </p>
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsLikes"
+              />
+              500
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsComments"
+              />
+              100
+            </div>
           </div>
         </div>
       </div>
@@ -646,20 +898,38 @@ Object {
             By 
             Michael Sum
           </p>
-          <div
-            class="cardDateViewWrapper"
+          <p
+            class="cardDate"
           >
-            <p
-              class="cardDate"
+            March 28th, 2022
+          </p>
+          <div
+            class="cardStatistics"
+          >
+            <div
+              class="statisticsItem"
             >
-              March 28th, 2022
-            </p>
-            <p
-              class="cardViews"
-            >
-              Views: 
+              <div
+                class="statisticsImg statisticsViews"
+              />
               1000
-            </p>
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsLikes"
+              />
+              500
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsComments"
+              />
+              100
+            </div>
           </div>
         </div>
       </div>
@@ -685,20 +955,38 @@ Object {
             By 
             Loan
           </p>
-          <div
-            class="cardDateViewWrapper"
+          <p
+            class="cardDate"
           >
-            <p
-              class="cardDate"
+            March 28th, 2022
+          </p>
+          <div
+            class="cardStatistics"
+          >
+            <div
+              class="statisticsItem"
             >
-              March 28th, 2022
-            </p>
-            <p
-              class="cardViews"
-            >
-              Views: 
+              <div
+                class="statisticsImg statisticsViews"
+              />
               1000
-            </p>
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsLikes"
+              />
+              500
+            </div>
+            <div
+              class="statisticsItem"
+            >
+              <div
+                class="statisticsImg statisticsComments"
+              />
+              100
+            </div>
           </div>
         </div>
       </div>

@@ -24,9 +24,20 @@ class Card extends React.Component<CardProps, CardState> {
         <div className={style.cardBody}>
           <p className={style.cardTitle}>{this.props.title}</p>
           <p className={style.cardOwner}>By {this.props.author}</p>
-          <div className={style.cardDateViewWrapper}>
-            <p className={style.cardDate}>{this.props.date}</p>
-            <p className={style.cardViews}>Views: {this.props.views}</p>
+          <p className={style.cardDate}>{this.props.date}</p>
+          <div className={style.cardStatistics}>
+            <div className={style.statisticsItem}>
+              <div className={`${style.statisticsImg} ${style.statisticsViews}`}></div>
+              {this.props.views}
+            </div>
+            <div className={style.statisticsItem}>
+              <div className={`${style.statisticsImg} ${style.statisticsLikes}`}></div>
+              {this.props.likes}
+            </div>
+            <div className={style.statisticsItem}>
+              <div className={`${style.statisticsImg} ${style.statisticsComments}`}></div>
+              {this.props.comments}
+            </div>
           </div>
         </div>
       </div>

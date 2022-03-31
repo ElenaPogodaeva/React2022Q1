@@ -17,7 +17,7 @@ const propsValues = [
   {
     id: '2',
     title: 'Gray cat',
-    author: 'Max Baskakov',
+    author: 'Jonathan Falcon',
     url: '',
     date: 'March 26th, 2022',
     views: '1000',
