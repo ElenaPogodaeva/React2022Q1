@@ -10,7 +10,9 @@ const Layout = () => {
     <div className={style.wrapper}>
       <Header />
       <main className={style.main}>
-        <Outlet />
+        <div className={style.container}>
+          <Outlet />
+        </div>
       </main>
       <Footer />
     </div>
