@@ -93,42 +93,11 @@ const propsValues = [
   },
 ];
 
-type HomePageProps = Record<string, never>;
-type HomePageState = {
-  searchValue: string;
-};
-
-class HomePage extends React.Component<HomePageProps, HomePageState> {
-  constructor(props: HomePageProps) {
-    super(props);
-    this.state = {
-      searchValue: '',
-    };
-    this.handleSearchBarChange = this.handleSearchBarChange.bind(this);
-  }
-
-  handleSearchBarChange(value: string) {
-    this.setState({ searchValue: value });
-  }
-
-  componentDidMount() {
-    const localStorageValue = localStorage.getItem('searchValue');
-    if (localStorageValue) {
-      this.setState({ searchValue: localStorageValue });
-    }
-  }
-
-  componentWillUnmount() {
-    localStorage.setItem('searchValue', this.state.searchValue);
-  }
-
+class HomePage extends React.Component {
   render() {
     return (
       <div data-testid="home-page">
-        <SearchBar
-          searchValue={this.state.searchValue}
-          onSearchBarChange={this.handleSearchBarChange}
-        />
+        <SearchBar />
         <Cards cards={propsValues} />
       </div>
     );

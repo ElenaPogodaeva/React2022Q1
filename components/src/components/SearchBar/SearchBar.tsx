@@ -2,21 +2,32 @@ import React from 'react';
 
 import style from './SearchBar.module.scss';
 
-type SearchBarProps = {
-  searchValue: string;
-  onSearchBarChange: (value: string) => void;
-};
+type SearchBarProps = Record<string, never>;
 
-type SearchBarState = Record<string, never>;
+type SearchBarState = Record<string, string>;
 
 class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
   constructor(props: SearchBarProps) {
     super(props);
+    this.state = {
+      searchValue: '',
+    };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
-    this.props.onSearchBarChange(event.target.value);
+    this.setState({ searchValue: event.target.value });
+  }
+
+  componentDidMount() {
+    const localStorageValue = localStorage.getItem('searchValue');
+    if (localStorageValue) {
+      this.setState({ searchValue: localStorageValue });
+    }
+  }
+
+  componentWillUnmount() {
+    localStorage.setItem('searchValue', this.state.searchValue);
   }
 
   render() {
@@ -25,7 +36,7 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
         <input
           type="text"
           className={style.searchbarInput}
-          value={this.props.searchValue}
+          value={this.state.searchValue}
           onChange={this.handleChange}
           placeholder="Search"
         ></input>
