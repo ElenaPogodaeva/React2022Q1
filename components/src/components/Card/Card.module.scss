@@ -15,9 +15,6 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  // justify-content: flex-start;
-  //padding: 0 20px;
 }
 .card:hover {
   transform: scale(1.008);
@@ -35,15 +32,6 @@
   flex-direction: column;
   height: 100%;
 }
-
-// .cardDateViewWrapper {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   margin: 10px 0;
-//   margin-top: 10px;
-//   margin-bottom: 10px;
-// }
 
 .cardTitle {
   margin-bottom: 5px;
@@ -88,25 +76,20 @@
 .cardDate {
   font-size: .8rem;
 }
-@media(max-width: 1150px) {
+
+@media(max-width: 1200px) {
   .card {
     width: calc(33.33% - 30px);
   }
 }
-@media(max-width: 900px) {
+@media(max-width: 992px) {
   .card {
     width: calc(50% - 30px);
-    //height: 400px;
-  }
-  .teamCard {
-    width: calc(100% - 30px);
-    //height: 250px;
   }
 }
-@media(max-width: 600px) {
+@media(max-width: 576px) {
   .card {
     width: calc(100% - 30px);
-    //height: 350px;
     justify-content: center;
   }
 }
