@@ -12,23 +12,12 @@ type SearchBarState = Record<string, never>;
 class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
   constructor(props: SearchBarProps) {
     super(props);
-    // this.state = {
-    //   searchValue: '',
-    // };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
-    //this.setState({ searchValue: event.target.value });
     this.props.onSearchBarChange(event.target.value);
   }
-
-  // componentDidMount() {
-  //   this.setState({ searchValue: localStorage.getItem('searchValue') || '' });
-  // }
-  // componentWillUnmount() {
-  //   localStorage.setItem('searchValue', this.state.searchValue);
-  // }
 
   render() {
     return (

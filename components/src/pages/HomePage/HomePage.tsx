@@ -93,9 +93,7 @@ const propsValues = [
   },
 ];
 
-type HomePageProps = Record<string, never>; //{
-// props: Record<string, never>;
-//};
+type HomePageProps = Record<string, never>;
 type HomePageState = {
   searchValue: string;
 };
@@ -115,7 +113,6 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
 
   componentDidMount() {
     const localStorageValue = localStorage.getItem('searchValue');
-    //this.setState({ searchValue: localStorage.getItem('searchValue') || '' });
     if (localStorageValue) {
       this.setState({ searchValue: localStorageValue });
     }
