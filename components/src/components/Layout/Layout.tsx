@@ -5,18 +5,20 @@ import Header from '../Header/Header';
 
 import style from './Layout.module.scss';
 
-const Layout = () => {
-  return (
-    <div className={style.wrapper}>
-      <Header />
-      <main className={style.main}>
-        <div className={style.container}>
-          <Outlet />
-        </div>
-      </main>
-      <Footer />
-    </div>
-  );
-};
+class Layout extends React.Component {
+  render() {
+    return (
+      <div className={style.wrapper}>
+        <Header />
+        <main className={style.main}>
+          <div className={style.container}>
+            <Outlet />
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+}
 
 export default Layout;

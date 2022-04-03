@@ -1,7 +1,9 @@
 import React from 'react';
 
-const AboutPage = () => {
-  return <div data-testid="about-page">About Page</div>;
-};
+class AboutPage extends React.Component {
+  render() {
+    return <div data-testid="about-page">About Page</div>;
+  }
+}
 
 export default AboutPage;
