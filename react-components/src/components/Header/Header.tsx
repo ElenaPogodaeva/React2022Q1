@@ -19,6 +19,11 @@ class Header extends React.Component {
                   About
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/form" className={style.menuLink} data-testid="form-link">
+                  Form
+                </NavLink>
+              </li>
             </ul>
           </nav>
         </div>
