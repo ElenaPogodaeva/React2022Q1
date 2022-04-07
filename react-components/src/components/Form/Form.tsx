@@ -149,7 +149,9 @@ class Form extends React.Component<FormProps, FormState> {
             <p>
               First Name
               {this.state?.errors.firstName === '' && (
-                <span className={style.error}>* first name should be fill</span>
+                <span className={style.error} data-testid="errorFirstName">
+                  * first name should be fill
+                </span>
               )}
             </p>
             <input
@@ -160,14 +162,15 @@ class Form extends React.Component<FormProps, FormState> {
               placeholder="First name"
               onChange={this.handleChange}
               autoComplete="off"
-              data-testid="firstName"
             />
           </label>
           <label className={style.formLabel}>
             <p>
               Last Name
               {this.state?.errors.lastName === '' && (
-                <span className={style.error}>* last name should be fill</span>
+                <span className={style.error} data-testid="errorLastName">
+                  * last name should be fill
+                </span>
               )}
             </p>
             <input
@@ -178,14 +181,15 @@ class Form extends React.Component<FormProps, FormState> {
               onChange={this.handleChange}
               placeholder="Last name"
               autoComplete="off"
-              data-testid="lastName"
             />
           </label>
           <label className={style.formLabel}>
             <p>
               Birth Date
               {this.state?.errors.birthDate === '' && (
-                <span className={style.error}>* birth date should be fill</span>
+                <span className={style.error} data-testid="errorBirthDate">
+                  * birth date should be fill
+                </span>
               )}
             </p>
             <input
@@ -198,7 +202,7 @@ class Form extends React.Component<FormProps, FormState> {
             />
           </label>
           <p className={style.radioWrapper}>
-            Gender
+            <label className={style.formLabel}>Gender</label>
             <label>
               <input
                 type="radio"
@@ -224,9 +228,10 @@ class Form extends React.Component<FormProps, FormState> {
           <label className={style.formLabel}>
             Country
             <select name="country" ref={this.countrySelect} className={style.formSelect}>
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
+              <option value="Australia">Australia</option>
+              <option value="Canada">Canada</option>
+              <option value="Russia">Russia</option>
+              <option value="Usa">USA</option>
             </select>
           </label>
           <label className={style.formLabel}>
@@ -244,7 +249,9 @@ class Form extends React.Component<FormProps, FormState> {
             />
             I agree to the Terms and Conditions
             {this.state?.errors.agree !== undefined && (
-              <p className={style.error}>* agree should be checked</p>
+              <p className={style.error} data-testid="errorAgree">
+                * agree should be checked
+              </p>
             )}
           </label>
           <input
