@@ -18,7 +18,7 @@ class UserCard extends React.Component<UserCardProps, UserCardState> {
   render() {
     return (
       <div className={style.userCard} data-testid="user-card">
-        <img src={`${this.props.photo}`} className={style.userImg} />
+        <img src={this.props.photo} className={style.userImg} />
         <div className={style.row}>
           <div className={`${style.col} ${style.userTitle}`}>First Name:</div>
           <div className={`${style.col} ${style.userText}`}>{this.props.firstName}</div>

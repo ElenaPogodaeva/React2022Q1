@@ -30,12 +30,11 @@ class FormPage extends React.Component<FormPageProps, FormPageState> {
   }
 
   setFormValues(data: UserCardModel) {
-    // const { firstName, lastName, birthDate, gender, country, photo, agree } = data;
     this.setState({
       formValues: [...this.state.formValues, data],
     });
   }
-  // { firstName, lastName, birthDate, gender, country, photo, agree }
+
   render() {
     return (
       <div data-testid="form-page">
