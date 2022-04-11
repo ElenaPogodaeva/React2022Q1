@@ -10,6 +10,7 @@ type UserCard = {
   country: string;
   photo: string;
   agree: boolean;
+  [key: string]: string | boolean;
 };
 
 type FormErrors = {
@@ -66,7 +67,7 @@ class Form extends React.Component<FormProps, FormState> {
     };
   }
 
-  async validate() {
+  async setFormState() {
     await this.setState({
       formValues: {
         firstName: (this.firstNameInput.current as HTMLInputElement).value,
@@ -82,30 +83,23 @@ class Form extends React.Component<FormProps, FormState> {
       },
       errors: {},
     });
+  }
 
-    if (this.state.formValues.firstName === '') {
+  async validateField(fieldName: string) {
+    if (!this.state.formValues[fieldName]) {
       await this.setState({
-        errors: { ...this.state.errors, firstName: this.state.formValues.firstName },
+        errors: { ...this.state.errors, [fieldName]: this.state.formValues[fieldName] },
       });
     }
-    if (this.state.formValues.lastName === '') {
-      await this.setState({
-        errors: { ...this.state.errors, lastName: this.state.formValues.lastName },
-      });
-    }
-    if (this.state.formValues.birthDate === '') {
-      await this.setState({
-        errors: { ...this.state.errors, birthDate: this.state.formValues.birthDate },
-      });
-    }
-    if (!this.state.formValues.agree) {
-      await this.setState({
-        errors: {
-          ...this.state.errors,
-          agree: this.state.formValues.agree,
-        },
-      });
-    }
+  }
+
+  async validate() {
+    await this.setFormState();
+
+    this.validateField('firstName');
+    this.validateField('lastName');
+    this.validateField('birthDate');
+    this.validateField('agree');
   }
 
   handleChange(event: React.ChangeEvent<HTMLInputElement>) {
