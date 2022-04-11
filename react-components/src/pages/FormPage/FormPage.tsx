@@ -41,9 +41,7 @@ class FormPage extends React.Component<FormPageProps, FormPageState> {
         <Form setFormValues={this.setFormValues} />
         <div className={style.userCards} data-testid="user-cards">
           {this.state.formValues &&
-            this.state.formValues.map((item: UserCardModel, index: number) => (
-              <UserCard key={index} {...item} />
-            ))}
+            this.state.formValues.map((item, index) => <UserCard key={index} {...item} />)}
         </div>
       </div>
     );
