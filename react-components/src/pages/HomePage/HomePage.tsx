@@ -1,104 +1,95 @@
+import { stringify } from 'querystring';
 import React from 'react';
 import Cards from '../../components/Cards/Cards';
 import SearchBar from '../../components/SearchBar/SearchBar';
+import { Image } from '../../types/types';
 
-const propsValues = [
-  {
-    id: '1',
-    title: 'Portrait of a cat looking at the camera',
-    author: 'Lloyd Henneman',
-    url: '',
-    date: 'March 26th, 2022',
-    views: '1000',
-    likes: '500',
-    dislikes: '200',
-    comments: '100',
-  },
-  {
-    id: '2',
-    title: 'Gray cat',
-    author: 'Jonathan Falcon',
-    url: '',
-    date: 'March 26th, 2022',
-    views: '1000',
-    likes: '500',
-    dislikes: '200',
-    comments: '100',
-  },
-  {
-    id: '3',
-    title: 'Stretching in the morning',
-    author: 'Timo Volz',
-    url: '',
-    date: 'March 26th, 2022',
-    views: '1000',
-    likes: '500',
-    dislikes: '200',
-    comments: '100',
-  },
-  {
-    id: '4',
-    title: 'Gray cat with flowers',
-    author: 'Milada Vigerova',
-    url: '',
-    date: 'March 28th, 2022',
-    views: '1000',
-    likes: '500',
-    dislikes: '200',
-    comments: '100',
-  },
-  {
-    id: '5',
-    title: 'Kitten',
-    author: 'Alvan Nee',
-    url: '',
-    date: 'March 28th, 2022',
-    views: '1000',
-    likes: '500',
-    dislikes: '200',
-    comments: '100',
-  },
-  {
-    id: '6',
-    title: 'Two kittens sitting in a basket',
-    author: 'Amy Baugess',
-    url: '',
-    date: 'March 28th, 2022',
-    views: '1000',
-    likes: '500',
-    dislikes: '200',
-    comments: '100',
-  },
-  {
-    id: '7',
-    title: 'Red cat lying on a wooden floor',
-    author: 'Michael Sum',
-    url: '',
-    date: 'March 28th, 2022',
-    views: '1000',
-    likes: '500',
-    dislikes: '200',
-    comments: '100',
-  },
-  {
-    id: '8',
-    title: 'Yawn cat',
-    author: 'Loan',
-    url: '',
-    date: 'March 28th, 2022',
-    views: '1000',
-    likes: '500',
-    dislikes: '200',
-    comments: '100',
-  },
-];
+const API_KEY = '76f2ad1b1c2bc03737c9a268bb694c82';
 
-class HomePage extends React.Component {
+type HomePageProps = Record<string, never>;
+type HomePageState = {
+  searchValue: string;
+  images: Image[];
+};
+
+type SearchParams = {
+  method: string;
+  api_key: string;
+  tags: string;
+  extras: string;
+  page: string;
+  format: string;
+  nojsoncallback: string;
+  sort: string;
+  per_page: string;
+  [key: string]: string;
+};
+
+class HomePage extends React.Component<HomePageProps, HomePageState> {
+  constructor(props: HomePageProps) {
+    super(props);
+    this.state = {
+      searchValue: '',
+      images: [],
+    };
+    this.handleSearchBarChange = this.handleSearchBarChange.bind(this);
+  }
+
+  handleSearchBarChange(value: string) {
+    this.setState({ searchValue: value });
+  }
+
+  async fetchImages() {
+    const searchValue = this.state.searchValue;
+    
+    const url = new URL('https://www.flickr.com/services/rest');
+    
+    const params: SearchParams = {
+      method: 'flickr.photos.search',
+      api_key: API_KEY,
+      tags: searchValue,
+      extras: 'url_n,owner_name,date_taken,views',
+      page: '1',
+      format: 'json',
+      nojsoncallback: '1',
+      sort: 'interestingness-desc',
+      per_page: '50',
+    };
+    
+    Object.keys(params).forEach((key) => url.searchParams.append(key, params[key]));
+    // const response = await fetch(
+    //   `https://www.flickr.com/services/rest?method=flickr.photos.search&api_key=${API_KEY}&tags=${searchValue}&sort=interestingness-desc&extras=url_h,owner_name,date_taken,views&format=json&nojsoncallback=1&per_page=50&page=1`
+    // );
+    console.log(url);
+    const response = await fetch(url.href);
+    let fetchedImages = await response.json();
+    fetchedImages = fetchedImages.photos.photo.filter((item: Image) => item.url_n);
+
+    this.setState({
+      images: fetchedImages,
+    });
+  }
+
+  async componentDidMount() {
+    const localStorageValue = localStorage.getItem('searchValue');
+    if (localStorageValue) {
+      await this.setState({ searchValue: localStorageValue });
+    }
+    this.fetchImages();
+  }
+
+  componentWillUnmount() {
+    localStorage.setItem('searchValue', this.state.searchValue);
+  }
+
   render() {
     return (
       <div data-testid="home-page">
-        <SearchBar />
-        <Cards cards={propsValues} />
+        <SearchBar
+          searchValue={this.state.searchValue}
+          onSearchBarChange={this.handleSearchBarChange}
+        />
+        <Cards cards={this.state.images} />
       </div>
     );
   }
