@@ -2,6 +2,7 @@ import React from 'react';
 import Cards from '../../components/Cards/Cards';
 import ImageDetail from '../../components/ImageDetail/ImageDetail';
 import SearchBar from '../../components/SearchBar/SearchBar';
+import Spinner from '../../components/Spinner/Spinner';
 import { Image } from '../../types/types';
 
 const API_KEY = '76f2ad1b1c2bc03737c9a268bb694c82';
@@ -10,6 +11,7 @@ type HomePageProps = Record<string, never>;
 type HomePageState = {
   searchValue: string;
   images: Image[];
+  isLoading: boolean;
 };
 
 type SearchParams = {
@@ -31,6 +33,7 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
     this.state = {
       searchValue: '',
       images: [],
+      isLoading: true,
     };
     this.handleSearchBarChange = this.handleSearchBarChange.bind(this);
     this.handleSearchBarSubmit = this.handleSearchBarSubmit.bind(this);
@@ -45,6 +48,9 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
   }
 
   async fetchImages() {
+    this.setState({
+      isLoading: true,
+    });
     const searchValue = this.state.searchValue;
 
     const url = new URL('https://www.flickr.com/services/rest');
@@ -72,6 +78,9 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
     this.setState({
       images: fetchedImages,
     });
+    this.setState({
+      isLoading: false,
+    });
   }
 
   async componentDidMount() {
@@ -87,6 +96,7 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
   }
 
   render() {
+    const isLoading = this.state.isLoading;
     return (
       <div data-testid="home-page">
         <SearchBar
@@ -94,8 +104,8 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
           onSearchBarChange={this.handleSearchBarChange}
           onSearchBarSubmit={this.handleSearchBarSubmit}
         />
-        <Cards cards={this.state.images} />
-        {/* <ImageDetail /> */}
+        {isLoading ? <Spinner /> : <Cards cards={this.state.images} />}
+        {/* <ImageDetail {...this.state.images[0]}></ImageDetail> */}
       </div>
     );
   }
