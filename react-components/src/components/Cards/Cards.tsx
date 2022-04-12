@@ -1,22 +1,10 @@
 import React from 'react';
 import Card from '../Card/Card';
-
+import { Image } from '../../types/types';
 import style from './Cards.module.scss';
 
-type CardProps = {
-  id: string;
-  title: string;
-  author: string;
-  url: string;
-  date: string;
-  views: string;
-  likes: string;
-  dislikes: string;
-  comments: string;
-};
-
 type CardsProps = {
-  cards: CardProps[];
+  cards: Image[];
 };
 
 type CardsState = {
