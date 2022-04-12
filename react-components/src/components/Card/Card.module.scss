@@ -2,7 +2,6 @@
 .card {
   width: calc(25% - 30px);
   min-width: 200px;
-  height: 400px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1);
@@ -13,8 +12,6 @@
   transition: all 0.3s ease-in-out;
   margin: 15px;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
 }
 .card:hover {
   transform: scale(1.008);
@@ -27,10 +24,7 @@
   object-fit: cover;
 }
 .cardBody {
-  padding: 10px 20px 20px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  padding: 15px 20px 20px;
 }
 
 .cardTitle {
@@ -40,41 +34,34 @@
 .cardOwner {
   font-size: .8rem;
   color: rgba(0, 0, 0, 0.54);
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+}
+.cardTitle,
+.cardOwner {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.cardStatistics {
+.cardDateViewWrapper {
   font-size: .8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: auto;
 }
 
-.statisticsItem {
+.cardViews {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.statisticsImg {
+.cardViewsImg {
   background-size: 20px 20px;
   background-repeat: no-repeat;
   margin-right: 5px;
   width: 20px;
   height: 20px;
-}
-.statisticsViews {
   background-image: url(../../../public/svg/viewed.svg);
-}
-.statisticsLikes {
-  background-image: url(../../../public/svg/liked.svg);
-}
-.statisticsComments {
-  background-image: url(../../../public/svg/comments.svg);
-}
-
-.cardDate {
-  font-size: .8rem;
 }
 
 @media(max-width: 1200px) {
