@@ -1,6 +1,6 @@
-import { stringify } from 'querystring';
 import React from 'react';
 import Cards from '../../components/Cards/Cards';
+import ImageDetail from '../../components/ImageDetail/ImageDetail';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import { Image } from '../../types/types';
 
@@ -33,17 +33,22 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
       images: [],
     };
     this.handleSearchBarChange = this.handleSearchBarChange.bind(this);
+    this.handleSearchBarSubmit = this.handleSearchBarSubmit.bind(this);
   }
 
   handleSearchBarChange(value: string) {
     this.setState({ searchValue: value });
   }
 
+  handleSearchBarSubmit() {
+    this.fetchImages();
+  }
+
   async fetchImages() {
     const searchValue = this.state.searchValue;
-    
+
     const url = new URL('https://www.flickr.com/services/rest');
-    
+
     const params: SearchParams = {
       method: 'flickr.photos.search',
       api_key: API_KEY,
@@ -53,14 +58,13 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
       format: 'json',
       nojsoncallback: '1',
       sort: 'interestingness-desc',
-      per_page: '50',
+      per_page: '100',
     };
-    
+
     Object.keys(params).forEach((key) => url.searchParams.append(key, params[key]));
     // const response = await fetch(
     //   `https://www.flickr.com/services/rest?method=flickr.photos.search&api_key=${API_KEY}&tags=${searchValue}&sort=interestingness-desc&extras=url_h,owner_name,date_taken,views&format=json&nojsoncallback=1&per_page=50&page=1`
     // );
-    console.log(url);
     const response = await fetch(url.href);
     let fetchedImages = await response.json();
     fetchedImages = fetchedImages.photos.photo.filter((item: Image) => item.url_n);
@@ -88,8 +92,10 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
         <SearchBar
           searchValue={this.state.searchValue}
           onSearchBarChange={this.handleSearchBarChange}
+          onSearchBarSubmit={this.handleSearchBarSubmit}
         />
         <Cards cards={this.state.images} />
+        {/* <ImageDetail /> */}
       </div>
     );
   }
