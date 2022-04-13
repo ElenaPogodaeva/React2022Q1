@@ -1,19 +1,41 @@
 export type Image = {
   id: string;
   owner: string;
-  secret: string;
-  server: string;
-  farm: number;
   title: string;
-  ispublic: number;
-  isfriend: number;
-  isfamily: number;
   datetaken: string;
-  datetakengranularity: number;
-  datetakenunknown: number;
   ownername: string;
   views: number;
   url_n: string;
-  height_h: string;
-  width_h: string;
+  height_n: string;
+  width_n: string;
+};
+
+export type Tag = {
+  id: string;
+  _content: string;
+};
+
+export type ImageInfo = {
+  id: string;
+  description: {
+    _content: string;
+  };
+  owner: {
+    username: string;
+  };
+  title: {
+    _content: string;
+  };
+  tags: {
+    tag: Tag[];
+  };
+  dates: {
+    taken: string;
+  };
+  views: string;
+};
+
+export type ImageSize = {
+  label: string;
+  source: string;
 };
