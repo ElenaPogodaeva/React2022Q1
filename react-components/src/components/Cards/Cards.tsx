@@ -1,39 +1,28 @@
 import React from 'react';
 import Card from '../Card/Card';
-import { Image, ImageInfo, ImageSize } from '../../types/types';
+import { Image, ImageInfo, ImageSize, SearchInfoParams } from '../../types/types';
 import style from './Cards.module.scss';
 import ImageDetail from '../ImageDetail/ImageDetail';
 import Spinner from '../Spinner/Spinner';
-
-const API_KEY = '76f2ad1b1c2bc03737c9a268bb694c82';
+import { flickr } from '../../common/flickr';
 
 type CardsProps = {
   cards: Image[];
 };
 
 type CardsState = {
-  //state: Record<string, never>;
-  currentId: string;
+  currentImageId: string;
   imageInfo: ImageInfo | null;
   imageUrl: string;
   viewerIsOpen: boolean;
   isLoading: boolean;
 };
 
-type SearchParams = {
-  method: string;
-  api_key: string;
-  photo_id: string;
-  format: string;
-  nojsoncallback: string;
-  [key: string]: string;
-};
-
 class Cards extends React.Component<CardsProps, CardsState> {
   constructor(props: CardsProps) {
     super(props);
     this.state = {
-      currentId: '',
+      currentImageId: '',
       imageInfo: null,
       imageUrl: '',
       viewerIsOpen: false,
@@ -47,30 +36,24 @@ class Cards extends React.Component<CardsProps, CardsState> {
     // this.setState({
     //   isLoading: true,
     // });
-    const currentId = this.state.currentId;
+    const currentId = this.state.currentImageId;
 
-    const url = new URL('https://www.flickr.com/services/rest');
-
-    const params: SearchParams = {
-      method: 'flickr.photos.getInfo',
-      api_key: API_KEY,
+    const params: SearchInfoParams = {
       photo_id: currentId,
-      format: 'json',
-      nojsoncallback: '1',
     };
 
-    Object.keys(params).forEach((key) => url.searchParams.append(key, params[key]));
-    // const response = await fetch(
-    //   `https://www.flickr.com/services/rest?method=flickr.photos.search&api_key=${API_KEY}&tags=${searchValue}&sort=interestingness-desc&extras=url_h,owner_name,date_taken,views&format=json&nojsoncallback=1&per_page=50&page=1`
-    // );
-    const response = await fetch(url.href);
-    const fetchedImageInfo = await response.json();
-    //fetchedImageInfo = fetchedImageInfo.photo;//filter((item: Image) => item.url_n);
-
-    this.setState({
-      imageInfo: fetchedImageInfo.photo,
-      //isLoading: false,
-    });
+    try {
+      const fetchedImageInfo = await flickr('photos.getInfo', params);
+      this.setState({
+        imageInfo: fetchedImageInfo.photo,
+      });
+    } catch (err) {
+      console.error(err);
+    } finally {
+      // this.setState({
+      //   isLoading: false,
+      // });
+    }
   }
 
   // async fetchImageComments() {
@@ -107,39 +90,44 @@ class Cards extends React.Component<CardsProps, CardsState> {
     // this.setState({
     //   isLoading: true,
     // });
-    const currentId = this.state.currentId;
+    const currentId = this.state.currentImageId;
 
-    const url = new URL('https://www.flickr.com/services/rest');
-
-    const params: SearchParams = {
-      method: 'flickr.photos.getSizes',
-      api_key: API_KEY,
+    const params: SearchInfoParams = {
       photo_id: currentId,
-      format: 'json',
-      nojsoncallback: '1',
     };
 
-    Object.keys(params).forEach((key) => url.searchParams.append(key, params[key]));
+    try {
+      const fetchedImageSizes = await flickr('photos.getSizes', params);
+      const sizes = fetchedImageSizes.sizes.size;
+
+      this.setState({
+        imageUrl: sizes
+          .reverse()
+          .filter((s: ImageSize) => s.label === 'Small' || s.label === 'Large')[0].source,
+        //isLoading: false,
+      });
+    } catch (err) {
+      console.error(err);
+    } finally {
+      // this.setState({
+      //   isLoading: false,
+      // });
+    }
+
+    //Object.keys(params).forEach((key) => url.searchParams.append(key, params[key]));
     // const response = await fetch(
     //   `https://www.flickr.com/services/rest?method=flickr.photos.search&api_key=${API_KEY}&tags=${searchValue}&sort=interestingness-desc&extras=url_h,owner_name,date_taken,views&format=json&nojsoncallback=1&per_page=50&page=1`
     // );
-    const response = await fetch(url.href);
-    const fetchedImageSizes = await response.json();
-    //fetchedImageInfo = fetchedImageInfo.photo;//filter((item: Image) => item.url_n);
-    const sizes = fetchedImageSizes.sizes.size;
-    console.log(sizes);
-
-    this.setState({
-      imageUrl: sizes
-        .reverse()
-        .filter((s: ImageSize) => s.label === 'Small' || s.label === 'Large')[0].source,
-      //isLoading: false,
-    });
+    // const response = await fetch(url.href);
+    // const fetchedImageSizes = await response.json();
+    // //fetchedImageInfo = fetchedImageInfo.photo;//filter((item: Image) => item.url_n);
+    // const sizes = fetchedImageSizes.sizes.size;
+    // console.log(sizes);
   }
 
   async handleClick(id: string) {
     await this.setState({
-      currentId: id,
+      currentImageId: id,
       viewerIsOpen: true,
       isLoading: true,
     });
@@ -158,6 +146,7 @@ class Cards extends React.Component<CardsProps, CardsState> {
 
   render() {
     const isLoading = this.state.isLoading;
+
     if (!this.props.cards.length) return null;
 
     return (
@@ -169,12 +158,11 @@ class Cards extends React.Component<CardsProps, CardsState> {
             ))}
         </div>
         {this.state.viewerIsOpen ? (
-          isLoading ? (
+          this.state.isLoading ? (
             <Spinner />
           ) : (
             <ImageDetail
               imageInfo={this.state.imageInfo as ImageInfo}
-              //imageComments={this.state.imageComments as ImageComment[]}
               imageUrl={this.state.imageUrl}
               handleClose={this.handleClose}
             />
