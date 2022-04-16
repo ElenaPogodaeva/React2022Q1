@@ -26,37 +26,10 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
     this.handleSearchBarSubmit = this.handleSearchBarSubmit.bind(this);
   }
 
-  handleSearchBarChange(value: string) {
-    this.setState({ searchValue: value });
-  }
-
-  handleSearchBarSubmit() {
-    this.fetchImages(this.state.searchValue);
-  }
-
-  // async flickr(method: string, params: SearchImageParams) {
-
-  //   const url = new URL('https://www.flickr.com/services/rest');
-  //   const flickrParams: SearchParams = {
-  //     method: `flickr.${method}`,
-  //     api_key: API_KEY,
-  //     format: 'json',
-  //     nojsoncallback: '1',
-  //     ...params,
-  //   };
-  //   //Object.keys(flickrParams).forEach((key) => url.searchParams.append(key, flickrParams[key]));
-  //   url.search = new URLSearchParams(flickrParams).toString();
-  //   const response = await fetch(url.href);
-  //   const fetchedData = await response.json();
-  //   return fetchedData;
-  // }
-
   async fetchImages(searchValue: string) {
     this.setState({
       isLoading: true,
     });
-
-    //const url = new URL('https://www.flickr.com/services/rest');
 
     const params: SearchImagesParams = {
       tags: searchValue,
@@ -65,12 +38,6 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
       sort: 'interestingness-desc',
       per_page: '100',
     };
-
-    //Object.keys(params).forEach((key) => url.searchParams.append(key, params[key]));
-    //url.search = new URLSearchParams(params).toString();
-    // const response = await fetch(
-    //   `https://www.flickr.com/services/rest?method=flickr.photos.search&api_key=${API_KEY}&tags=${searchValue}&sort=interestingness-desc&extras=url_h,owner_name,date_taken,views&format=json&nojsoncallback=1&per_page=50&page=1`
-    // );
 
     try {
       const fetchedImages = await flickr('photos.search', params);
@@ -93,6 +60,14 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
         isLoading: false,
       });
     }
+  }
+
+  handleSearchBarChange(value: string) {
+    this.setState({ searchValue: value });
+  }
+
+  handleSearchBarSubmit() {
+    this.fetchImages(this.state.searchValue);
   }
 
   async componentDidMount() {

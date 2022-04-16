@@ -10,7 +10,6 @@ export async function flickr(method: string, params: SearchImagesParams | Search
     nojsoncallback: '1',
     ...params,
   };
-
   url.search = new URLSearchParams(flickrParams).toString();
   const response = await fetch(url.href);
   const fetchedData = await response.json();
