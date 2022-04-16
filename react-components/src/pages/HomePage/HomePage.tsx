@@ -10,6 +10,7 @@ type HomePageState = {
   searchValue: string;
   images: Image[];
   isLoading: boolean;
+  error: Error | null;
 };
 
 class HomePage extends React.Component<HomePageProps, HomePageState> {
@@ -19,6 +20,7 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
       searchValue: '',
       images: [],
       isLoading: true,
+      error: null,
     };
     this.handleSearchBarChange = this.handleSearchBarChange.bind(this);
     this.handleSearchBarSubmit = this.handleSearchBarSubmit.bind(this);
@@ -29,7 +31,7 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
   }
 
   handleSearchBarSubmit() {
-    this.fetchImages();
+    this.fetchImages(this.state.searchValue);
   }
 
   // async flickr(method: string, params: SearchImageParams) {
@@ -49,22 +51,17 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
   //   return fetchedData;
   // }
 
-  async fetchImages() {
+  async fetchImages(searchValue: string) {
     this.setState({
       isLoading: true,
     });
-    const searchValue = this.state.searchValue;
 
     //const url = new URL('https://www.flickr.com/services/rest');
 
     const params: SearchImagesParams = {
-      //method: 'flickr.photos.search',
-      //api_key: API_KEY,
       tags: searchValue,
       extras: 'url_n,owner_name,date_taken,views',
       page: '1',
-      //format: 'json',
-      //nojsoncallback: '1',
       sort: 'interestingness-desc',
       per_page: '100',
     };
@@ -74,15 +71,23 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
     // const response = await fetch(
     //   `https://www.flickr.com/services/rest?method=flickr.photos.search&api_key=${API_KEY}&tags=${searchValue}&sort=interestingness-desc&extras=url_h,owner_name,date_taken,views&format=json&nojsoncallback=1&per_page=50&page=1`
     // );
+
     try {
       const fetchedImages = await flickr('photos.search', params);
-      //fetchedImages = fetchedImages.photos.photo.filter((item: Image) => item.url_n);
 
       this.setState({
         images: fetchedImages.photos.photo.filter((item: Image) => item.url_n),
       });
+      this.setState({
+        error: null,
+      });
     } catch (err) {
-      console.error(err);
+      this.setState({
+        images: [],
+      });
+      this.setState({
+        error: err as Error,
+      });
     } finally {
       this.setState({
         isLoading: false,
@@ -94,8 +99,10 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
     const localStorageValue = localStorage.getItem('searchValue');
     if (localStorageValue) {
       await this.setState({ searchValue: localStorageValue });
+      await this.fetchImages(this.state.searchValue);
+    } else {
+      await this.fetchImages('nature,flowers');
     }
-    this.fetchImages();
   }
 
   componentWillUnmount() {
@@ -103,7 +110,10 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
   }
 
   render() {
+    const images = this.state.images;
     const isLoading = this.state.isLoading;
+    const error = this.state.error;
+    const notFound = !error && !isLoading && images.length === 0 ? 'Nothing found' : null;
 
     return (
       <div data-testid="home-page">
@@ -112,8 +122,9 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
           onSearchBarChange={this.handleSearchBarChange}
           onSearchBarSubmit={this.handleSearchBarSubmit}
         />
-
+        {error && <div>Error occured</div>}
         {isLoading ? <Spinner /> : <Cards cards={this.state.images} />}
+        {notFound}
       </div>
     );
   }

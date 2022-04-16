@@ -23,7 +23,9 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
 
   handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    this.props.onSearchBarSubmit();
+    if (this.props.searchValue) {
+      this.props.onSearchBarSubmit();
+    }
   }
 
   render() {
@@ -36,7 +38,7 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
           onChange={this.handleChange}
           placeholder="Search"
         ></input>
-        <button type="submit" className={style.searchbarBtn}>
+        <button type="submit" className={style.searchbarBtn} data-testid="search-btn">
           Search
         </button>
       </form>
