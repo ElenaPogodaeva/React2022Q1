@@ -76,7 +76,7 @@ Object {
         >
           <img
             class="cardImg"
-            src="1.jpg"
+            src="https://live.staticflickr.com/65535/51997149627_019125af5f_n.jpg"
           />
           <div
             class="cardBody"
@@ -84,45 +84,29 @@ Object {
             <p
               class="cardTitle"
             >
-              Portrait of a cat looking at the camera
+              7K8A8825
             </p>
             <p
               class="cardOwner"
             >
               By 
-              Lloyd Henneman
-            </p>
-            <p
-              class="cardDate"
-            >
-              March 26th, 2022
+              rpealit
             </p>
             <div
-              class="cardStatistics"
+              class="cardDateViewWrapper"
             >
+              <p
+                class="cardDate"
+              >
+                2022-03-25 08:58:40
+              </p>
               <div
-                class="statisticsItem"
+                class="cardViews"
               >
                 <div
-                  class="statisticsImg statisticsViews"
+                  class="cardViewsImg"
                 />
-                1000
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsLikes"
-                />
-                500
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsComments"
-                />
-                100
+                0
               </div>
             </div>
           </div>
@@ -133,7 +117,7 @@ Object {
         >
           <img
             class="cardImg"
-            src="2.jpg"
+            src="https://live.staticflickr.com/65535/51997148422_5241706f03_n.jpg"
           />
           <div
             class="cardBody"
@@ -141,45 +125,29 @@ Object {
             <p
               class="cardTitle"
             >
-              Gray cat
+              7K8A8822
             </p>
             <p
               class="cardOwner"
             >
               By 
-              Max Baskakov
-            </p>
-            <p
-              class="cardDate"
-            >
-              March 26th, 2022
+              rpealit
             </p>
             <div
-              class="cardStatistics"
+              class="cardDateViewWrapper"
             >
+              <p
+                class="cardDate"
+              >
+                2022-03-25 08:57:47
+              </p>
               <div
-                class="statisticsItem"
+                class="cardViews"
               >
                 <div
-                  class="statisticsImg statisticsViews"
+                  class="cardViewsImg"
                 />
-                1000
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsLikes"
-                />
-                500
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsComments"
-                />
-                100
+                0
               </div>
             </div>
           </div>
@@ -190,7 +158,7 @@ Object {
         >
           <img
             class="cardImg"
-            src="3.jpg"
+            src="https://live.staticflickr.com/65535/51998153496_6836c7c666_n.jpg"
           />
           <div
             class="cardBody"
@@ -198,45 +166,29 @@ Object {
             <p
               class="cardTitle"
             >
-              Stretching in the morning
+              7K8A8814
             </p>
             <p
               class="cardOwner"
             >
               By 
-              Timo Volz
-            </p>
-            <p
-              class="cardDate"
-            >
-              March 26th, 2022
+              rpealit
             </p>
             <div
-              class="cardStatistics"
+              class="cardDateViewWrapper"
             >
+              <p
+                class="cardDate"
+              >
+                2022-03-25 08:57:05
+              </p>
               <div
-                class="statisticsItem"
+                class="cardViews"
               >
                 <div
-                  class="statisticsImg statisticsViews"
+                  class="cardViewsImg"
                 />
-                1000
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsLikes"
-                />
-                500
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsComments"
-                />
-                100
+                0
               </div>
             </div>
           </div>
@@ -247,7 +199,7 @@ Object {
         >
           <img
             class="cardImg"
-            src="4.jpg"
+            src="https://live.staticflickr.com/65535/51998203123_901b4b1b2c_n.jpg"
           />
           <div
             class="cardBody"
@@ -255,45 +207,29 @@ Object {
             <p
               class="cardTitle"
             >
-              Gray cat with flowers
+              7K8A8810
             </p>
             <p
               class="cardOwner"
             >
               By 
-              Milada Vigerova
-            </p>
-            <p
-              class="cardDate"
-            >
-              March 28th, 2022
+              rpealit
             </p>
             <div
-              class="cardStatistics"
+              class="cardDateViewWrapper"
             >
+              <p
+                class="cardDate"
+              >
+                2022-03-25 08:55:21
+              </p>
               <div
-                class="statisticsItem"
+                class="cardViews"
               >
                 <div
-                  class="statisticsImg statisticsViews"
+                  class="cardViewsImg"
                 />
-                1000
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsLikes"
-                />
-                500
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsComments"
-                />
-                100
+                1
               </div>
             </div>
           </div>
@@ -304,7 +240,7 @@ Object {
         >
           <img
             class="cardImg"
-            src="5.jpg"
+            src="https://live.staticflickr.com/65535/51998398294_9916ab058e_n.jpg"
           />
           <div
             class="cardBody"
@@ -312,216 +248,29 @@ Object {
             <p
               class="cardTitle"
             >
-              Kitten
+              Speckled Wood
             </p>
             <p
               class="cardOwner"
             >
               By 
-              Alvan Nee
-            </p>
-            <p
-              class="cardDate"
-            >
-              March 28th, 2022
+              davidhampton1066
             </p>
             <div
-              class="cardStatistics"
+              class="cardDateViewWrapper"
             >
+              <p
+                class="cardDate"
+              >
+                2022-04-11 10:46:01
+              </p>
               <div
-                class="statisticsItem"
+                class="cardViews"
               >
                 <div
-                  class="statisticsImg statisticsViews"
+                  class="cardViewsImg"
                 />
-                1000
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsLikes"
-                />
-                500
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsComments"
-                />
-                100
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="card"
-          data-testid="card"
-        >
-          <img
-            class="cardImg"
-            src="6.jpg"
-          />
-          <div
-            class="cardBody"
-          >
-            <p
-              class="cardTitle"
-            >
-              Two kittens sitting in a basket
-            </p>
-            <p
-              class="cardOwner"
-            >
-              By 
-              Amy Baugess
-            </p>
-            <p
-              class="cardDate"
-            >
-              March 28th, 2022
-            </p>
-            <div
-              class="cardStatistics"
-            >
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsViews"
-                />
-                1000
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsLikes"
-                />
-                500
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsComments"
-                />
-                100
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="card"
-          data-testid="card"
-        >
-          <img
-            class="cardImg"
-            src="7.jpg"
-          />
-          <div
-            class="cardBody"
-          >
-            <p
-              class="cardTitle"
-            >
-              Red cat lying on a wooden floor
-            </p>
-            <p
-              class="cardOwner"
-            >
-              By 
-              Michael Sum
-            </p>
-            <p
-              class="cardDate"
-            >
-              March 28th, 2022
-            </p>
-            <div
-              class="cardStatistics"
-            >
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsViews"
-                />
-                1000
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsLikes"
-                />
-                500
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsComments"
-                />
-                100
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="card"
-          data-testid="card"
-        >
-          <img
-            class="cardImg"
-            src="8.jpg"
-          />
-          <div
-            class="cardBody"
-          >
-            <p
-              class="cardTitle"
-            >
-              Yawn cat
-            </p>
-            <p
-              class="cardOwner"
-            >
-              By 
-              Loan
-            </p>
-            <p
-              class="cardDate"
-            >
-              March 28th, 2022
-            </p>
-            <div
-              class="cardStatistics"
-            >
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsViews"
-                />
-                1000
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsLikes"
-                />
-                500
-              </div>
-              <div
-                class="statisticsItem"
-              >
-                <div
-                  class="statisticsImg statisticsComments"
-                />
-                100
+                2
               </div>
             </div>
           </div>
@@ -540,7 +289,7 @@ Object {
       >
         <img
           class="cardImg"
-          src="1.jpg"
+          src="https://live.staticflickr.com/65535/51997149627_019125af5f_n.jpg"
         />
         <div
           class="cardBody"
@@ -548,45 +297,29 @@ Object {
           <p
             class="cardTitle"
           >
-            Portrait of a cat looking at the camera
+            7K8A8825
           </p>
           <p
             class="cardOwner"
           >
             By 
-            Lloyd Henneman
-          </p>
-          <p
-            class="cardDate"
-          >
-            March 26th, 2022
+            rpealit
           </p>
           <div
-            class="cardStatistics"
+            class="cardDateViewWrapper"
           >
+            <p
+              class="cardDate"
+            >
+              2022-03-25 08:58:40
+            </p>
             <div
-              class="statisticsItem"
+              class="cardViews"
             >
               <div
-                class="statisticsImg statisticsViews"
+                class="cardViewsImg"
               />
-              1000
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsLikes"
-              />
-              500
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsComments"
-              />
-              100
+              0
             </div>
           </div>
         </div>
@@ -597,7 +330,7 @@ Object {
       >
         <img
           class="cardImg"
-          src="2.jpg"
+          src="https://live.staticflickr.com/65535/51997148422_5241706f03_n.jpg"
         />
         <div
           class="cardBody"
@@ -605,45 +338,29 @@ Object {
           <p
             class="cardTitle"
           >
-            Gray cat
+            7K8A8822
           </p>
           <p
             class="cardOwner"
           >
             By 
-            Max Baskakov
-          </p>
-          <p
-            class="cardDate"
-          >
-            March 26th, 2022
+            rpealit
           </p>
           <div
-            class="cardStatistics"
+            class="cardDateViewWrapper"
           >
+            <p
+              class="cardDate"
+            >
+              2022-03-25 08:57:47
+            </p>
             <div
-              class="statisticsItem"
+              class="cardViews"
             >
               <div
-                class="statisticsImg statisticsViews"
+                class="cardViewsImg"
               />
-              1000
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsLikes"
-              />
-              500
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsComments"
-              />
-              100
+              0
             </div>
           </div>
         </div>
@@ -654,7 +371,7 @@ Object {
       >
         <img
           class="cardImg"
-          src="3.jpg"
+          src="https://live.staticflickr.com/65535/51998153496_6836c7c666_n.jpg"
         />
         <div
           class="cardBody"
@@ -662,45 +379,29 @@ Object {
           <p
             class="cardTitle"
           >
-            Stretching in the morning
+            7K8A8814
           </p>
           <p
             class="cardOwner"
           >
             By 
-            Timo Volz
-          </p>
-          <p
-            class="cardDate"
-          >
-            March 26th, 2022
+            rpealit
           </p>
           <div
-            class="cardStatistics"
+            class="cardDateViewWrapper"
           >
+            <p
+              class="cardDate"
+            >
+              2022-03-25 08:57:05
+            </p>
             <div
-              class="statisticsItem"
+              class="cardViews"
             >
               <div
-                class="statisticsImg statisticsViews"
+                class="cardViewsImg"
               />
-              1000
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsLikes"
-              />
-              500
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsComments"
-              />
-              100
+              0
             </div>
           </div>
         </div>
@@ -711,7 +412,7 @@ Object {
       >
         <img
           class="cardImg"
-          src="4.jpg"
+          src="https://live.staticflickr.com/65535/51998203123_901b4b1b2c_n.jpg"
         />
         <div
           class="cardBody"
@@ -719,45 +420,29 @@ Object {
           <p
             class="cardTitle"
           >
-            Gray cat with flowers
+            7K8A8810
           </p>
           <p
             class="cardOwner"
           >
             By 
-            Milada Vigerova
-          </p>
-          <p
-            class="cardDate"
-          >
-            March 28th, 2022
+            rpealit
           </p>
           <div
-            class="cardStatistics"
+            class="cardDateViewWrapper"
           >
+            <p
+              class="cardDate"
+            >
+              2022-03-25 08:55:21
+            </p>
             <div
-              class="statisticsItem"
+              class="cardViews"
             >
               <div
-                class="statisticsImg statisticsViews"
+                class="cardViewsImg"
               />
-              1000
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsLikes"
-              />
-              500
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsComments"
-              />
-              100
+              1
             </div>
           </div>
         </div>
@@ -768,7 +453,7 @@ Object {
       >
         <img
           class="cardImg"
-          src="5.jpg"
+          src="https://live.staticflickr.com/65535/51998398294_9916ab058e_n.jpg"
         />
         <div
           class="cardBody"
@@ -776,216 +461,29 @@ Object {
           <p
             class="cardTitle"
           >
-            Kitten
+            Speckled Wood
           </p>
           <p
             class="cardOwner"
           >
             By 
-            Alvan Nee
-          </p>
-          <p
-            class="cardDate"
-          >
-            March 28th, 2022
+            davidhampton1066
           </p>
           <div
-            class="cardStatistics"
+            class="cardDateViewWrapper"
           >
+            <p
+              class="cardDate"
+            >
+              2022-04-11 10:46:01
+            </p>
             <div
-              class="statisticsItem"
+              class="cardViews"
             >
               <div
-                class="statisticsImg statisticsViews"
+                class="cardViewsImg"
               />
-              1000
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsLikes"
-              />
-              500
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsComments"
-              />
-              100
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="card"
-        data-testid="card"
-      >
-        <img
-          class="cardImg"
-          src="6.jpg"
-        />
-        <div
-          class="cardBody"
-        >
-          <p
-            class="cardTitle"
-          >
-            Two kittens sitting in a basket
-          </p>
-          <p
-            class="cardOwner"
-          >
-            By 
-            Amy Baugess
-          </p>
-          <p
-            class="cardDate"
-          >
-            March 28th, 2022
-          </p>
-          <div
-            class="cardStatistics"
-          >
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsViews"
-              />
-              1000
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsLikes"
-              />
-              500
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsComments"
-              />
-              100
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="card"
-        data-testid="card"
-      >
-        <img
-          class="cardImg"
-          src="7.jpg"
-        />
-        <div
-          class="cardBody"
-        >
-          <p
-            class="cardTitle"
-          >
-            Red cat lying on a wooden floor
-          </p>
-          <p
-            class="cardOwner"
-          >
-            By 
-            Michael Sum
-          </p>
-          <p
-            class="cardDate"
-          >
-            March 28th, 2022
-          </p>
-          <div
-            class="cardStatistics"
-          >
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsViews"
-              />
-              1000
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsLikes"
-              />
-              500
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsComments"
-              />
-              100
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="card"
-        data-testid="card"
-      >
-        <img
-          class="cardImg"
-          src="8.jpg"
-        />
-        <div
-          class="cardBody"
-        >
-          <p
-            class="cardTitle"
-          >
-            Yawn cat
-          </p>
-          <p
-            class="cardOwner"
-          >
-            By 
-            Loan
-          </p>
-          <p
-            class="cardDate"
-          >
-            March 28th, 2022
-          </p>
-          <div
-            class="cardStatistics"
-          >
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsViews"
-              />
-              1000
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsLikes"
-              />
-              500
-            </div>
-            <div
-              class="statisticsItem"
-            >
-              <div
-                class="statisticsImg statisticsComments"
-              />
-              100
+              2
             </div>
           </div>
         </div>
