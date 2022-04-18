@@ -100,17 +100,14 @@ class Cards extends React.Component<CardsProps, CardsState> {
               <Card key={card.id} card={card} handleClick={this.handleClick} />
             ))}
         </div>
-        {this.state.viewerIsOpen ? (
-          this.state.isLoading ? (
-            <Spinner />
-          ) : (
-            <ImageDetail
-              imageInfo={this.state.imageInfo as ImageInfo}
-              imageUrl={this.state.imageUrl}
-              handleClose={this.handleClose}
-            />
-          )
-        ) : null}
+        {this.state.viewerIsOpen && this.state.isLoading && <Spinner />}
+        {this.state.viewerIsOpen && !this.state.isLoading && (
+          <ImageDetail
+            imageInfo={this.state.imageInfo as ImageInfo}
+            imageUrl={this.state.imageUrl}
+            handleClose={this.handleClose}
+          />
+        )}
       </>
     );
   }
