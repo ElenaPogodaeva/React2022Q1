@@ -2,55 +2,61 @@ import React from 'react';
 
 import style from './UserCard.module.scss';
 
-type UserCardProps = {
+type UserCardModel = {
   firstName: string;
   lastName: string;
   birthDate: string;
   gender: string;
   country: string;
-  photo: string;
+  photo: FileList;
   agree: boolean;
 };
 
-type UserCardState = Record<string, never>;
+export const UserCard = ({
+  firstName,
+  lastName,
+  birthDate,
+  gender,
+  country,
+  photo,
+  agree,
+}: UserCardModel) => {
+  const src = photo[0] ? URL.createObjectURL(photo[0]) : require(`../../assets/img/avatar.jpg`);
 
-class UserCard extends React.Component<UserCardProps, UserCardState> {
-  render() {
-    return (
-      <div className={style.userCard} data-testid="user-card">
-        <img src={this.props.photo} className={style.userImg} />
-        <div className={style.row}>
-          <div className={`${style.col} ${style.userTitle}`}>First Name:</div>
-          <div className={`${style.col} ${style.userText}`}>{this.props.firstName}</div>
-        </div>
-        <hr></hr>
-        <div className={style.row}>
-          <div className={`${style.col} ${style.userTitle}`}>Last Name:</div>
-          <div className={`${style.col} ${style.userText}`}>{this.props.lastName}</div>
-        </div>
-        <hr></hr>
-        <div className={style.row}>
-          <div className={`${style.col} ${style.userTitle}`}>Birth Date:</div>
-          <div className={`${style.col} ${style.userText}`}>{this.props.birthDate}</div>
-        </div>
-        <hr></hr>
-        <div className={style.row}>
-          <div className={`${style.col} ${style.userTitle}`}>Gender:</div>
-          <div className={`${style.col} ${style.userText}`}>{this.props.gender}</div>
-        </div>
-        <hr></hr>
-        <div className={style.row}>
-          <div className={`${style.col} ${style.userTitle}`}>Country:</div>
-          <div className={`${style.col} ${style.userText}`}>{this.props.country}</div>
-        </div>
-        <hr></hr>
-        <div className={style.row}>
-          <div className={`${style.col} ${style.userTitle}`}>Agree:</div>
-          <div className={`${style.col} ${style.userText}`}>{this.props.agree.toString()}</div>
-        </div>
+  return (
+    <div className={style.userCard} data-testid="user-card">
+      <img src={src} className={style.userImg} />
+      <div className={style.row}>
+        <div className={`${style.col} ${style.userTitle}`}>First Name:</div>
+        <div className={`${style.col} ${style.userText}`}>{firstName}</div>
       </div>
-    );
-  }
-}
+      <hr></hr>
+      <div className={style.row}>
+        <div className={`${style.col} ${style.userTitle}`}>Last Name:</div>
+        <div className={`${style.col} ${style.userText}`}>{lastName}</div>
+      </div>
+      <hr></hr>
+      <div className={style.row}>
+        <div className={`${style.col} ${style.userTitle}`}>Birth Date:</div>
+        <div className={`${style.col} ${style.userText}`}>{birthDate}</div>
+      </div>
+      <hr></hr>
+      <div className={style.row}>
+        <div className={`${style.col} ${style.userTitle}`}>Gender:</div>
+        <div className={`${style.col} ${style.userText}`}>{gender}</div>
+      </div>
+      <hr></hr>
+      <div className={style.row}>
+        <div className={`${style.col} ${style.userTitle}`}>Country:</div>
+        <div className={`${style.col} ${style.userText}`}>{country}</div>
+      </div>
+      <hr></hr>
+      <div className={style.row}>
+        <div className={`${style.col} ${style.userTitle}`}>Agree:</div>
+        <div className={`${style.col} ${style.userText}`}>{agree.toString()}</div>
+      </div>
+    </div>
+  );
+};
 
 export default UserCard;
