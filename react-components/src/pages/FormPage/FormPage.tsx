@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Form from '../../components/Form/Form';
 import UserCard from '../../components/UserCard/UserCard';
 
@@ -10,42 +10,25 @@ type UserCardModel = {
   birthDate: string;
   gender: string;
   country: string;
-  photo: string;
+  photo: FileList;
   agree: boolean;
 };
 
-type FormPageState = {
-  formValues: UserCardModel[];
-};
+export const FormPage = () => {
+  const [formValues, setFormValues] = useState<UserCardModel[]>([]);
 
-type FormPageProps = Record<string, never>;
+  const setValues = (data: UserCardModel) => {
+    setFormValues((state) => [...state, data]);
+  };
 
-class FormPage extends React.Component<FormPageProps, FormPageState> {
-  constructor(props: FormPageProps) {
-    super(props);
-    this.state = {
-      formValues: [],
-    };
-    this.setFormValues = this.setFormValues.bind(this);
-  }
-
-  setFormValues(data: UserCardModel) {
-    this.setState({
-      formValues: [...this.state.formValues, data],
-    });
-  }
-
-  render() {
-    return (
-      <div data-testid="form-page">
-        <Form setFormValues={this.setFormValues} />
-        <div className={style.userCards} data-testid="user-cards">
-          {this.state.formValues &&
-            this.state.formValues.map((item, index) => <UserCard key={index} {...item} />)}
-        </div>
+  return (
+    <div data-testid="form-page">
+      <Form setValues={setValues} />
+      <div className={style.userCards} data-testid="user-cards">
+        {formValues && formValues.map((item, index) => <UserCard key={index} {...item} />)}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default FormPage;
