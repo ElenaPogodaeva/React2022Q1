@@ -12,13 +12,11 @@ describe('Search component', () => {
     expect(screen.getByPlaceholderText(/Search/i)).toBeInTheDocument();
   });
 
-  it('Typing in SearchBar works', () => {
+  it('onChange works', () => {
     render(<SearchBar searchValue="" onSearchBarChange={onChange} onSearchBarSubmit={onSumbit} />);
-
-    expect(screen.queryByDisplayValue(/React/)).toBeNull();
 
     userEvent.type(screen.getByRole('textbox'), 'React');
 
-    expect(screen.queryByDisplayValue(/React/)).toBeInTheDocument();
+    expect(onChange).toHaveBeenCalledTimes(5);
   });
 });
