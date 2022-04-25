@@ -69,12 +69,11 @@ export const Cards = ({ cards }: CardsProps) => {
     setViewerIsOpen(false);
   };
 
-  if (!cards.length) return null;
-
   return (
     <>
       <div className={style.cards} data-testid="cards">
-        {cards && cards.map((card) => <Card key={card.id} card={card} handleClick={handleClick} />)}
+        {Boolean(cards.length) &&
+          cards.map((card) => <Card key={card.id} card={card} handleClick={handleClick} />)}
       </div>
       {viewerIsOpen && isLoading && <Spinner />}
       {viewerIsOpen && !isLoading && (
