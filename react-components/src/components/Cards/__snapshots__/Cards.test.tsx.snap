@@ -4,9 +4,19 @@ exports[`Cards component Cards empty snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div />
+    <div>
+      <div
+        class="cards"
+        data-testid="cards"
+      />
+    </div>
   </body>,
-  "container": <div />,
+  "container": <div>
+    <div
+      class="cards"
+      data-testid="cards"
+    />
+  </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],

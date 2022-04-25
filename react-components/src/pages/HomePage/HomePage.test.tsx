@@ -41,7 +41,7 @@ describe('HomePage', () => {
 
     unmount();
 
-    expect(window.localStorage.setItem).toHaveBeenCalledTimes(12);
+    expect(window.localStorage.setItem).toHaveBeenCalledTimes(2);
     expect(window.localStorage.setItem).toHaveBeenCalledWith('searchValue', 'fake-value');
   });
 

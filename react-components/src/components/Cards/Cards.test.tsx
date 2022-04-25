@@ -107,8 +107,8 @@ describe('Cards component', () => {
   });
   it('Cards renders without data', () => {
     const { queryByTestId } = render(<Cards cards={[]} />);
-    const cards = queryByTestId('cards');
-    expect(cards).toBeNull();
+    const card = queryByTestId('card');
+    expect(card).toBeNull();
   });
   it('Cards snapshot', () => {
     const cards = render(<Cards cards={mockResponse} />);
