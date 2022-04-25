@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Cards from '../../components/Cards/Cards';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Spinner from '../../components/Spinner/Spinner';
@@ -11,6 +11,9 @@ export const HomePage = () => {
   const [images, setImages] = useState<Image[]>([]);
   const [error, setError] = useState<Error | null>(null);
 
+  const searchValueRef = useRef('');
+  searchValueRef.current = searchValue;
+
   const fetchImages = async (searchValue: string) => {
     setIsLoading(true);
     const params: SearchImagesParams = {
@@ -18,7 +21,7 @@ export const HomePage = () => {
       extras: 'url_n,owner_name,date_taken,views',
       page: '1',
       sort: 'interestingness-desc',
-      per_page: '100',
+      per_page: '30',
     };
 
     try {
@@ -27,7 +30,7 @@ export const HomePage = () => {
       setError(null);
     } catch (err) {
       setImages([]);
-      setError(error);
+      setError(err as Error);
     } finally {
       setIsLoading(false);
     }
@@ -41,13 +44,11 @@ export const HomePage = () => {
     } else {
       fetchImages('nature,flowers');
     }
-  }, []);
 
-  useEffect(() => {
     return () => {
-      localStorage.setItem('searchValue', searchValue);
+      localStorage.setItem('searchValue', searchValueRef.current as string);
     };
-  }, [searchValue]);
+  }, []);
 
   const handleSearchBarChange = (value: string) => {
     setSearchValue(value);
