@@ -7,13 +7,13 @@ const onSumbit = jest.fn();
 
 describe('Search component', () => {
   it('Search renders', () => {
-    render(<SearchBar searchValue="" onSearchBarChange={onChange} onSearchBarSubmit={onSumbit} />);
+    render(<SearchBar />);
 
     expect(screen.getByPlaceholderText(/Search/i)).toBeInTheDocument();
   });
 
   it('onChange works', () => {
-    render(<SearchBar searchValue="" onSearchBarChange={onChange} onSearchBarSubmit={onSumbit} />);
+    render(<SearchBar />);
 
     userEvent.type(screen.getByRole('textbox'), 'React');
 
