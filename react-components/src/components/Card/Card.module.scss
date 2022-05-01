@@ -1,0 +1,82 @@
+
+.card {
+  width: calc(25% - 30px);
+  min-width: 200px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #29244e;
+  font-size: 1.1rem;
+  line-height: 26px;
+  transition: all 0.3s ease-in-out;
+  margin: 15px;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.008);
+  box-shadow: 1px 3px 4px rgb(0 0 0 / 20%);
+}
+.cardImg {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.cardBody {
+  padding: 15px 20px 20px;
+}
+
+.cardTitle {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.cardOwner {
+  font-size: .8rem;
+  color: rgba(0, 0, 0, 0.54);
+  margin-bottom: 30px;
+}
+.cardTitle,
+.cardOwner {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.cardDateViewWrapper {
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardViews {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.cardViewsImg {
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../../public/svg/viewed.svg);
+}
+
+@media(max-width: 1200px) {
+  .card {
+    width: calc(33.33% - 30px);
+  }
+}
+@media(max-width: 992px) {
+  .card {
+    width: calc(50% - 30px);
+  }
+}
+@media(max-width: 576px) {
+  .card {
+    width: calc(100% - 30px);
+    justify-content: center;
+  }
+}

@@ -1,0 +1,555 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cards component Cards empty snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="cards"
+        data-testid="cards"
+      />
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="cards"
+      data-testid="cards"
+    />
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Cards component Cards snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="cards"
+        data-testid="cards"
+      >
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="https://live.staticflickr.com/65535/51997149627_019125af5f_n.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              7K8A8825
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              rpealit
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                2022-03-25 08:58:40
+              </p>
+              <div
+                class="cardViews"
+              >
+                <div
+                  class="cardViewsImg"
+                />
+                0
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="https://live.staticflickr.com/65535/51997148422_5241706f03_n.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              7K8A8822
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              rpealit
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                2022-03-25 08:57:47
+              </p>
+              <div
+                class="cardViews"
+              >
+                <div
+                  class="cardViewsImg"
+                />
+                0
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="https://live.staticflickr.com/65535/51998153496_6836c7c666_n.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              7K8A8814
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              rpealit
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                2022-03-25 08:57:05
+              </p>
+              <div
+                class="cardViews"
+              >
+                <div
+                  class="cardViewsImg"
+                />
+                0
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="https://live.staticflickr.com/65535/51998203123_901b4b1b2c_n.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              7K8A8810
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              rpealit
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                2022-03-25 08:55:21
+              </p>
+              <div
+                class="cardViews"
+              >
+                <div
+                  class="cardViewsImg"
+                />
+                1
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          data-testid="card"
+        >
+          <img
+            class="cardImg"
+            src="https://live.staticflickr.com/65535/51998398294_9916ab058e_n.jpg"
+          />
+          <div
+            class="cardBody"
+          >
+            <p
+              class="cardTitle"
+            >
+              Speckled Wood
+            </p>
+            <p
+              class="cardOwner"
+            >
+              By 
+              davidhampton1066
+            </p>
+            <div
+              class="cardDateViewWrapper"
+            >
+              <p
+                class="cardDate"
+              >
+                2022-04-11 10:46:01
+              </p>
+              <div
+                class="cardViews"
+              >
+                <div
+                  class="cardViewsImg"
+                />
+                2
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="cards"
+      data-testid="cards"
+    >
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="https://live.staticflickr.com/65535/51997149627_019125af5f_n.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            7K8A8825
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            rpealit
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              2022-03-25 08:58:40
+            </p>
+            <div
+              class="cardViews"
+            >
+              <div
+                class="cardViewsImg"
+              />
+              0
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="https://live.staticflickr.com/65535/51997148422_5241706f03_n.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            7K8A8822
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            rpealit
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              2022-03-25 08:57:47
+            </p>
+            <div
+              class="cardViews"
+            >
+              <div
+                class="cardViewsImg"
+              />
+              0
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="https://live.staticflickr.com/65535/51998153496_6836c7c666_n.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            7K8A8814
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            rpealit
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              2022-03-25 08:57:05
+            </p>
+            <div
+              class="cardViews"
+            >
+              <div
+                class="cardViewsImg"
+              />
+              0
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="https://live.staticflickr.com/65535/51998203123_901b4b1b2c_n.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            7K8A8810
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            rpealit
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              2022-03-25 08:55:21
+            </p>
+            <div
+              class="cardViews"
+            >
+              <div
+                class="cardViewsImg"
+              />
+              1
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card"
+        data-testid="card"
+      >
+        <img
+          class="cardImg"
+          src="https://live.staticflickr.com/65535/51998398294_9916ab058e_n.jpg"
+        />
+        <div
+          class="cardBody"
+        >
+          <p
+            class="cardTitle"
+          >
+            Speckled Wood
+          </p>
+          <p
+            class="cardOwner"
+          >
+            By 
+            davidhampton1066
+          </p>
+          <div
+            class="cardDateViewWrapper"
+          >
+            <p
+              class="cardDate"
+            >
+              2022-04-11 10:46:01
+            </p>
+            <div
+              class="cardViews"
+            >
+              <div
+                class="cardViewsImg"
+              />
+              2
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
