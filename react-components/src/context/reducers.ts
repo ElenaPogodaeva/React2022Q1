@@ -22,6 +22,7 @@ export enum ActionType {
   SetNextPage = 'Set_next_page',
   SetPrevPage = 'Set_prev_page',
   SetCurrentPage = 'Set_current_page',
+  ResetPage = 'Reset_page',
 }
 
 export type FetchSuccess = {
@@ -55,6 +56,9 @@ export type SetCurrentPage = {
   type: ActionType.SetCurrentPage;
   payload: number;
 };
+export type ResetPage = {
+  type: ActionType.ResetPage;
+};
 
 export type SearchActions =
   | FetchSuccess
@@ -64,6 +68,9 @@ export type SearchActions =
   | SetNextPage
   | SetPrevPage
   | SetCurrentPage
+  | ResetPage;
+
+const pageNumberLimit = 5;
 
 export const searchReducer = (state: InitialStateType, action: SearchActions) => {
   switch (action.type) {
@@ -81,6 +88,7 @@ export const searchReducer = (state: InitialStateType, action: SearchActions) =>
         isLoading: false,
         error: 'Error occured',
         images: [],
+        totalPages: 0,
       };
     case ActionType.SetSearchValue:
       return {
@@ -92,26 +100,46 @@ export const searchReducer = (state: InitialStateType, action: SearchActions) =>
         ...state,
         [action.payload.name]: action.payload.value,
       };
-    case ActionType.SetNextPage: {
-      //const nextPage = state.currentPage + 1;
+    case ActionType.SetCurrentPage:
       return {
         ...state,
-        currentPage: state.currentPage + 1,
+        currentPage: action.payload,
       };
-    }
     case ActionType.SetPrevPage: {
-      //const nextPage = state.currentPage + 1;
+      if ((state.currentPage - 1) % pageNumberLimit === 0) {
+        return {
+          ...state,
+          maxPageLimit: state.maxPageLimit - pageNumberLimit,
+          minPageLimit: state.minPageLimit - pageNumberLimit,
+          currentPage: state.currentPage - 1,
+        };
+      }
       return {
         ...state,
         currentPage: state.currentPage - 1,
       };
     }
-    case ActionType.SetCurrentPage: {
+    case ActionType.SetNextPage: {
+      if (state.currentPage + 1 > state.maxPageLimit) {
+        return {
+          ...state,
+          maxPageLimit: state.maxPageLimit + pageNumberLimit,
+          minPageLimit: state.minPageLimit + pageNumberLimit,
+          currentPage: state.currentPage + 1,
+        };
+      }
       return {
         ...state,
-        currentPage: action.payload,
+        currentPage: state.currentPage + 1,
       };
     }
+    case ActionType.ResetPage:
+      return {
+        ...state,
+        maxPageLimit: 5,
+        minPageLimit: 0,
+        currentPage: 1,
+      };
     default:
       return state;
   }
