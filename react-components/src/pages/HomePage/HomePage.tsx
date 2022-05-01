@@ -6,6 +6,7 @@ import { Image, SearchImagesParams } from '../../types/types';
 import { flickr } from '../../common/flickr';
 import Pagination from '../../components/Pagination/Pagination';
 import { AppContext } from '../../context/context';
+import SearchOptions from '../../components/SearchOptions/SearchOptions';
 
 export const HomePage = () => {
   // const [searchValue, setSearchValue] = useState('');
@@ -97,6 +98,7 @@ export const HomePage = () => {
   return (
     <div data-testid="home-page">
       <SearchBar />
+      <SearchOptions />
       {error && <div>{error}</div>}
       {isLoading ? (
         <Spinner />
