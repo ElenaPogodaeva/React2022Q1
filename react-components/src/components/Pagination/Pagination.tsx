@@ -1,21 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../../context/context';
+import { ActionType } from '../../context/reducers';
 
-import { Image } from '../../types/types';
 import style from './Pagination.module.scss';
 
-type Pagination = {
-  currentPage: number;
-  maxPageLimit: number;
-  minPageLimit: number;
-  totalPages: number;
-  onPrevClick: () => void;
-  onNextClick: () => void;
-  onPageChange: (value: number) => void;
-};
+export const Pagination = () => {
+  const { state, dispatch } = useContext(AppContext);
 
-export const Pagination = (props: Pagination) => {
-  const { currentPage, maxPageLimit, minPageLimit } = props;
-  const totalPages = props.totalPages;
+  const { currentPage, maxPageLimit, minPageLimit, totalPages } = state;
 
   const pages = [];
   for (let i = 1; i <= totalPages; i++) {
@@ -23,15 +15,16 @@ export const Pagination = (props: Pagination) => {
   }
 
   const handlePrevClick = () => {
-    props.onPrevClick();
+    dispatch({ type: ActionType.SetPrevPage });
   };
 
   const handleNextClick = () => {
-    props.onNextClick();
+    dispatch({ type: ActionType.SetNextPage });
   };
 
   const handlePageClick = (e: React.MouseEvent) => {
-    props.onPageChange(Number((e.target as HTMLElement).id));
+    const pageNumber = Number((e.target as HTMLElement).id);
+    dispatch({ type: ActionType.SetCurrentPage, payload: pageNumber });
   };
 
   const pageNumbers = pages.map((page) => {
@@ -60,9 +53,9 @@ export const Pagination = (props: Pagination) => {
     pageDecremenDots = <li onClick={handlePrevClick}>&hellip;</li>;
   }
 
-  return (
-    Boolean(totalPages) && <ul className={style.pageNumbers}>
-       <li>
+  return totalPages ? (
+    <ul className={style.pageNumbers}>
+      <li>
         <button onClick={handlePrevClick} disabled={currentPage === pages[0]}>
           Prev
         </button>
@@ -76,7 +69,7 @@ export const Pagination = (props: Pagination) => {
         </button>
       </li>
     </ul>
-  );
+  ) : null;
 };
 
 export default Pagination;
