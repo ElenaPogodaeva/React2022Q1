@@ -25,7 +25,7 @@ const GlobalState: React.FC = ({ children }) => {
 
     try {
       const response = await flickr('photos.search', params);
-      const totalPages = response.photos.total;
+      const totalPages = response.photos.pages;
       const images = response.photos.photo.filter((item: Image) => item.url_n);
       dispatch({
         type: ActionType.FetchSuccess,
