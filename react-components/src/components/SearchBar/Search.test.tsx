@@ -1,9 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import SearchBar from './SearchBar';
-
-const onChange = jest.fn();
-const onSumbit = jest.fn();
 
 describe('Search component', () => {
   it('Search renders', () => {
