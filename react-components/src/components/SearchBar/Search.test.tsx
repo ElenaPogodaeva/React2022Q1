@@ -11,12 +11,4 @@ describe('Search component', () => {
 
     expect(screen.getByPlaceholderText(/Search/i)).toBeInTheDocument();
   });
-
-  it('onChange works', () => {
-    render(<SearchBar />);
-
-    userEvent.type(screen.getByRole('textbox'), 'React');
-
-    expect(onChange).toHaveBeenCalledTimes(5);
-  });
 });

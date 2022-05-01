@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import GlobalState from '../../context/GlobalState';
 
 import HomePage from './HomePage';
 
@@ -30,8 +31,8 @@ describe('HomePage', () => {
   });
 
   it('Should call localStorage getItem on render', () => {
-    render(<HomePage />);
-    expect(window.localStorage.getItem).toHaveBeenCalledTimes(3);
+    render(<GlobalState />);
+    expect(window.localStorage.getItem).toHaveBeenCalledTimes(5);
   });
   it('Should call localStorage setItem on unmount', () => {
     const { unmount } = render(<HomePage />);
@@ -41,7 +42,7 @@ describe('HomePage', () => {
 
     unmount();
 
-    expect(window.localStorage.setItem).toHaveBeenCalledTimes(2);
+    expect(window.localStorage.setItem).toHaveBeenCalledTimes(1);
     expect(window.localStorage.setItem).toHaveBeenCalledWith('searchValue', 'fake-value');
   });
 
