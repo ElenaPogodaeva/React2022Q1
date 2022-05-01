@@ -1,6 +1,6 @@
 import React from 'react';
-import { Image } from '../types/types';
-import { SearchActions } from './reducers';
+import { Image, UserCardModel } from '../types/types';
+import { Actions } from './reducers';
 
 export enum SortType {
   DatePostedDesc = 'date-posted-desc',
@@ -9,12 +9,6 @@ export enum SortType {
   InterestingAsc = 'interestingness-asc',
   Relevance = 'relevance',
 }
-
-type SearchOptions = {
-  sortBy: SortType;
-  resultsPerPage: number;
-  currentPage: number;
-};
 
 export type InitialStateType = {
   searchValue: string;
@@ -27,6 +21,7 @@ export type InitialStateType = {
   isLoading: boolean;
   error: string;
   images: Image[];
+  formValues: UserCardModel[];
 };
 
 export const initialState = {
@@ -34,22 +29,24 @@ export const initialState = {
   sortBy: SortType.InterestingDesc,
   resultsPerPage: 30,
   currentPage: 1,
-  totalPages: 1,
+  totalPages: 0,
   minPageLimit: 0,
   maxPageLimit: 5,
   isLoading: true,
   error: '',
   images: [],
+  formValues: [],
 };
-//export default React.createContext<InitialStateType>( initialState);
-
-//addProductToCart: product => {},
-//removeProductFromCart: productId =);
 
 export const AppContext = React.createContext<{
   state: InitialStateType;
-  dispatch: React.Dispatch<SearchActions>;
-  fetchImages: (searchValue: string, sortBy: SortType, perPage: number, currentPage: number) => void;
+  dispatch: React.Dispatch<Actions>;
+  fetchImages: (
+    searchValue: string,
+    sortBy: SortType,
+    perPage: number,
+    currentPage: number
+  ) => void;
 }>({
   state: initialState,
   dispatch: () => null,

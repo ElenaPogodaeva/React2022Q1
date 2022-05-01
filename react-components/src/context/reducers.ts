@@ -1,18 +1,5 @@
-import { Image } from '../types/types';
-import { InitialStateType, SortType } from './context';
-
-// type InitialStateType = {
-//   searchValue: string;
-//   sortBy: SortType;
-//   resultsPerPage: number;
-//   currentPage: number;
-//   totalPages: number;
-//   minPageLimit: number;
-//   maxPageLimit: number;
-//   isLoading: boolean;
-//   error: string;
-//   images: Image[];
-// };
+import { Image, UserCardModel } from '../types/types';
+import { InitialStateType } from './context';
 
 export enum ActionType {
   FetchSuccess = 'Fetch_success',
@@ -23,6 +10,7 @@ export enum ActionType {
   SetPrevPage = 'Set_prev_page',
   SetCurrentPage = 'Set_current_page',
   ResetPage = 'Reset_page',
+  AddUser = 'Add_user',
 }
 
 export type FetchSuccess = {
@@ -60,7 +48,14 @@ export type ResetPage = {
   type: ActionType.ResetPage;
 };
 
-export type SearchActions =
+export type AddUser = {
+  type: ActionType.AddUser;
+  payload: {
+    user: UserCardModel;
+  };
+};
+
+export type Actions =
   | FetchSuccess
   | FetchError
   | SetSearchValue
@@ -68,11 +63,12 @@ export type SearchActions =
   | SetNextPage
   | SetPrevPage
   | SetCurrentPage
-  | ResetPage;
+  | ResetPage
+  | AddUser;
 
 const pageNumberLimit = 5;
 
-export const searchReducer = (state: InitialStateType, action: SearchActions) => {
+export const mainReducer = (state: InitialStateType, action: Actions) => {
   switch (action.type) {
     case ActionType.FetchSuccess:
       return {
@@ -139,6 +135,11 @@ export const searchReducer = (state: InitialStateType, action: SearchActions) =>
         maxPageLimit: 5,
         minPageLimit: 0,
         currentPage: 1,
+      };
+    case ActionType.AddUser:
+      return {
+        ...state,
+        formValues: [...state.formValues, action.payload.user],
       };
     default:
       return state;
