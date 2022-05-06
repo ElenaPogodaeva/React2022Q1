@@ -1,12 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Image, UserCardModel } from '../types/types';
-// export interface SearchState {
-//   value: number
-// }
-
-// const initialState: SearchState = {
-//   value: 0,
-// }
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { flickr } from '../common/flickr';
+import { Image, SearchImagesParams, UserCardModel } from '../types/types';
 
 export enum SortType {
   DatePostedDesc = 'date-posted-desc',
@@ -47,6 +41,40 @@ const initialState: SearchState = {
 
 const pageNumberLimit = 5;
 
+type SearchOptions = {
+  searchValue: string;
+  sortBy: string;
+  resultsPerPage: number;
+  currentPage: number;
+};
+export const fetchImages = createAsyncThunk(
+  'search/fetchImages',
+  async (searchOptions: SearchOptions, { rejectWithValue }) => {
+    const { searchValue, sortBy, resultsPerPage, currentPage } = searchOptions;
+    const params: SearchImagesParams = {
+      tags: searchValue,
+      extras: 'url_n,owner_name,date_taken,views',
+      page: currentPage.toString(),
+      sort: sortBy,
+      per_page: resultsPerPage.toString(),
+    };
+
+    try {
+      const response = await flickr('photos.search', params);
+      const totalPages = response.photos.pages;
+      const images = response.photos.photo.filter((item: Image) => item.url_n);
+      // dispatch({
+      //   type: ActionType.FetchSuccess,
+      //   payload: { images, totalPages },
+      // });
+      return { images, totalPages };
+    } catch (err) {
+      // dispatch({ type: ActionType.FetchError });
+      return rejectWithValue((err as Error).message);
+    }
+  }
+);
+
 export const searchSlice = createSlice({
   name: 'search',
   initialState,
@@ -85,6 +113,24 @@ export const searchSlice = createSlice({
       state.minPageLimit = 0;
       state.currentPage = 1;
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchImages.pending, (state) => {
+      state.isLoading = true;
+      state.error = '';
+    });
+    builder.addCase(fetchImages.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.error = '';
+      state.images = action.payload.images;
+      state.totalPages = action.payload.totalPages;
+    });
+    builder.addCase(fetchImages.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = 'Error occured'; //action.payload;
+      state.images = [];
+      state.totalPages = 0;
+    });
   },
 });
 
