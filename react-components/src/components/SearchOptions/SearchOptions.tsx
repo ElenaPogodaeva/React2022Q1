@@ -1,16 +1,25 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AppContext } from '../../context/context';
 import { ActionType } from '../../context/reducers';
+import { fetchImages, setSearchOptions } from '../../features/searchSlice';
+import { useAppDispatch, useAppSelector } from '../../hooks';
 
 import style from './SearchOptions.module.scss';
 
 export const SearchOptions = () => {
-  const { state, dispatch } = useContext(AppContext);
-  const { sortBy, resultsPerPage, totalPages } = state;
+  //const { state, dispatch } = useContext(AppContext);
+  //const { sortBy, resultsPerPage, totalPages } = state;
 
+  const { searchValue, sortBy, resultsPerPage, totalPages, currentPage } = useAppSelector(
+    (state) => state.search
+  );
+  //const { state, dispatch, fetchImages } = useContext(AppContext);
+  //const { searchValue, sortBy, resultsPerPage, currentPage } = state;
+  const dispatch = useAppDispatch();
   const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
     const { name, value } = event.target;
-    dispatch({ type: ActionType.SetSearchOptions, payload: { name, value } });
+    //dispatch({ type: ActionType.SetSearchOptions, payload: { name, value } });
+    dispatch(setSearchOptions({ name, value }));
   };
 
   return (
