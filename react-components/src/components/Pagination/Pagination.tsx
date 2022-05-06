@@ -1,13 +1,14 @@
-import React, { useContext } from 'react';
-import { AppContext } from '../../context/context';
-import { ActionType } from '../../context/reducers';
+import React from 'react';
+import { setCurrentPage, setNextPage, setPrevPage } from '../../features/searchSlice';
+import { useAppDispatch, useAppSelector } from '../../hooks';
 
 import style from './Pagination.module.scss';
 
 export const Pagination = () => {
-  const { state, dispatch } = useContext(AppContext);
-
-  const { currentPage, maxPageLimit, minPageLimit, totalPages } = state;
+  const { currentPage, maxPageLimit, minPageLimit, totalPages } = useAppSelector(
+    (state) => state.search
+  );
+  const dispatch = useAppDispatch();
 
   const pages = [];
   for (let i = 1; i <= totalPages; i++) {
@@ -15,16 +16,16 @@ export const Pagination = () => {
   }
 
   const handlePrevClick = () => {
-    dispatch({ type: ActionType.SetPrevPage });
+    dispatch(setPrevPage());
   };
 
   const handleNextClick = () => {
-    dispatch({ type: ActionType.SetNextPage });
+    dispatch(setNextPage());
   };
 
   const handlePageClick = (e: React.MouseEvent) => {
     const pageNumber = Number((e.target as HTMLElement).id);
-    dispatch({ type: ActionType.SetCurrentPage, payload: pageNumber });
+    dispatch(setCurrentPage(pageNumber));
   };
 
   const pageNumbers = pages.map((page) => {
