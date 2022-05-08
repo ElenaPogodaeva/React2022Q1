@@ -8,7 +8,7 @@ import { UserCardModel } from '../../types/types';
 import style from './FormPage.module.scss';
 
 export const FormPage = () => {
-  const { formValues } = useAppSelector((state) => state.search);
+  const { formValues } = useAppSelector((state) => state.form);
   const dispatch = useAppDispatch();
 
   const setValues = (user: UserCardModel) => {

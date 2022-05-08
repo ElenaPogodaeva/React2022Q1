@@ -6,8 +6,9 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import Layout from './components/Layout/Layout';
 import FormPage from './pages/FormPage/FormPage';
 import { useAppDispatch, useAppSelector } from './hooks';
-import { fetchImages, setSearchValue } from './features/searchSlice';
+import { setSearchValue } from './features/searchSlice';
 import ImageDetail from './components/ImageDetail/ImageDetail';
+import { fetchImages } from './features/thunks';
 
 export const App = () => {
   const { searchValue, sortBy, resultsPerPage, currentPage } = useAppSelector(
@@ -18,14 +19,11 @@ export const App = () => {
   useEffect(() => {
     const localStorageValue = localStorage.getItem('searchValue');
     if (localStorageValue) {
-      //dispatch({ type: ActionType.SetSearchValue, payload: localStorageValue });
-      //fetchImages(localStorageValue, sortBy, resultsPerPage, currentPage);
       dispatch(setSearchValue(localStorageValue));
       dispatch(
         fetchImages({ searchValue: localStorageValue, sortBy, resultsPerPage, currentPage })
       );
     } else {
-      //fetchImages('nature,flowers', sortBy, resultsPerPage, currentPage);
       dispatch(setSearchValue('nature,flowers'));
       dispatch(fetchImages({ searchValue: 'nature,flowers', sortBy, resultsPerPage, currentPage }));
     }

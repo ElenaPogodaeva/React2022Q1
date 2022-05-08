@@ -89,7 +89,7 @@ export const searchSlice = createSlice({
       state.images = action.payload.images;
       state.totalPages = action.payload.totalPages;
     });
-    builder.addCase(fetchImages.rejected, (state, action) => {
+    builder.addCase(fetchImages.rejected, (state) => {
       state.isLoading = false;
       state.error = 'Error occured';
       state.images = [];

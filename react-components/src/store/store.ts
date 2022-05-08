@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import searchReducer from '../features/searchSlice';
 import detailReducer from '../features/detailSlice';
-import formReducer from '../features/detailSlice';
+import formReducer from '../features/formSlice';
 
 export const store = configureStore({
   reducer: {

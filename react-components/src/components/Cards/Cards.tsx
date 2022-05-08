@@ -9,19 +9,7 @@ type CardsProps = {
 };
 
 export const Cards = ({ cards }: CardsProps) => {
-  //const [currentImageId, setCurrentImageId] = useState('');
-
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   const fetchData = async() =>  {
-  //     //console.log('dispatch')
-  //     //console.log(currentImageId)
-  //     await dispatch(fetchImageData(currentImageId));
-  //   }
-  //   fetchData();
-  //   console.log(currentImageId)
-  // }, [dispatch, currentImageId]);
 
   const handleClick = (id: string) => {
     navigate(`/images/${id}`);

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { fetchImageData } from '../../features/detailSlice';
+import { fetchImageData } from '../../features/thunks';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { ImageInfo } from '../../types/types';
 import Spinner from '../Spinner/Spinner';
