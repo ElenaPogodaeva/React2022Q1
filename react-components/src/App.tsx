@@ -7,7 +7,7 @@ import Layout from './components/Layout/Layout';
 import FormPage from './pages/FormPage/FormPage';
 import { useAppDispatch, useAppSelector } from './hooks';
 import { setSearchValue } from './features/searchSlice';
-import ImageDetail from './components/ImageDetail/ImageDetail';
+import ImageDetail from './pages/ImageDetail/ImageDetail';
 import { fetchImages } from './features/thunks';
 
 export const App = () => {

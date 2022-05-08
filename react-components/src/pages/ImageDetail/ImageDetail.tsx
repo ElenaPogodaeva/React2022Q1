@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { fetchImageData } from '../../features/thunks';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { ImageInfo } from '../../types/types';
-import Spinner from '../Spinner/Spinner';
+import Spinner from '../../components/Spinner/Spinner';
 import style from './ImageDetail.module.scss';
 
 export const ImageDetail = () => {
