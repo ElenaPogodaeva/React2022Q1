@@ -1,4 +1,3 @@
-import { response } from 'msw';
 import { API_KEY } from '../common/constants';
 import { SearchImagesParams, SearchInfoParams, SearchParams } from '../types/types';
 

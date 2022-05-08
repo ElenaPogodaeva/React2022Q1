@@ -1,27 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../../context/context';
+import { ActionType } from '../../context/reducers';
 
 import style from './SearchBar.module.scss';
 
-type SearchBarProps = {
-  searchValue: string;
-  onSearchBarChange: (value: string) => void;
-  onSearchBarSubmit: () => void;
-};
+export const SearchBar = () => {
+  const { state, dispatch, fetchImages } = useContext(AppContext);
+  const { searchValue, sortBy, resultsPerPage, currentPage } = state;
 
-export const SearchBar = ({
-  searchValue,
-  onSearchBarChange,
-  onSearchBarSubmit,
-}: SearchBarProps) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { value } = event.target;
-    onSearchBarChange(value);
+    dispatch({ type: ActionType.SetSearchValue, payload: value });
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
     if (searchValue) {
-      onSearchBarSubmit();
+      fetchImages(searchValue, sortBy, resultsPerPage, currentPage);
+      dispatch({ type: ActionType.SetCurrentPage, payload: 1 });
+      dispatch({ type: ActionType.ResetPage });
     }
   };
 

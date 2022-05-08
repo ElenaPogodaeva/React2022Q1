@@ -1,0 +1,27 @@
+.searchOptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+.searchSelect, .searchInput {
+  display: block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 18px;
+  border: 1px solid gray;
+  width: 250px;
+  margin-top: 5px;
+}
+.searchInput {
+  width: 100px;
+}
+.searchLabel {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+}
+.totalPages {
+  padding: 5px 0;
+  margin-top: 5px;
+}

@@ -60,3 +60,13 @@ export type SearchImagesParams = {
 export type SearchInfoParams = {
   photo_id: string;
 };
+
+export type UserCardModel = {
+  firstName: string;
+  lastName: string;
+  birthDate: string;
+  gender: string;
+  country: string;
+  photo: FileList;
+  agree: boolean;
+};
