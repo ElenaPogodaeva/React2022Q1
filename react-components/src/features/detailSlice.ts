@@ -1,6 +1,6 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { flickr } from '../common/flickr';
-import { ImageInfo, SearchInfoParams, ImageSize } from '../types/types';
+import { createSlice } from '@reduxjs/toolkit';
+import { ImageInfo } from '../types/types';
+import { fetchImageData } from './thunks';
 
 export type DetailState = {
   isLoading: boolean;
@@ -15,29 +15,6 @@ const initialState: DetailState = {
   imageInfo: null,
   imageUrl: '',
 };
-
-export const fetchImageData = createAsyncThunk(
-  'detail/fetchImageData',
-  async (currentImageId: string, { rejectWithValue }) => {
-    const params: SearchInfoParams = {
-      photo_id: currentImageId,
-    };
-
-    try {
-      const fetchedImageInfo = await flickr('photos.getInfo', params);
-      const imageInfo = fetchedImageInfo.photo;
-      const fetchedImageSizes = await flickr('photos.getSizes', params);
-      const sizes = fetchedImageSizes.sizes.size;
-      const imageUrl = sizes
-        .reverse()
-        .filter((s: ImageSize) => s.label === 'Small' || s.label === 'Large')[0].source;
-
-      return { imageInfo, imageUrl };
-    } catch (err) {
-      return rejectWithValue((err as Error).message);
-    }
-  }
-);
 
 export const detailSlice = createSlice({
   name: 'detail',
