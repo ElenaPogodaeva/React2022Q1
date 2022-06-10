@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import GlobalState from '../../context/GlobalState';
+import App from '../../App';
 
 import HomePage from './HomePage';
 
@@ -31,7 +31,7 @@ describe('HomePage', () => {
   });
 
   it('Should call localStorage getItem on render', () => {
-    render(<GlobalState />);
+    render(<App />);
     expect(window.localStorage.getItem).toHaveBeenCalledTimes(5);
   });
   it('Should call localStorage setItem on unmount', () => {

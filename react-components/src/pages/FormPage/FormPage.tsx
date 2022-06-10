@@ -1,21 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Form from '../../components/Form/Form';
 import UserCard from '../../components/UserCard/UserCard';
-import { AppContext } from '../../context/context';
-import { ActionType } from '../../context/reducers';
+import { addUser } from '../../features/formSlice';
+import { useAppDispatch, useAppSelector } from '../../hooks';
 import { UserCardModel } from '../../types/types';
 
 import style from './FormPage.module.scss';
 
 export const FormPage = () => {
-  const { state, dispatch } = useContext(AppContext);
-  const formValues = state.formValues;
+  const { formValues } = useAppSelector((state) => state.form);
+  const dispatch = useAppDispatch();
 
   const setValues = (user: UserCardModel) => {
-    dispatch({
-      type: ActionType.AddUser,
-      payload: { user },
-    });
+    dispatch(addUser(user));
   };
 
   return (

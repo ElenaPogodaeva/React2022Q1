@@ -1,14 +1,20 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Cards from '../../components/Cards/Cards';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Spinner from '../../components/Spinner/Spinner';
 import Pagination from '../../components/Pagination/Pagination';
-import { AppContext } from '../../context/context';
 import SearchOptions from '../../components/SearchOptions/SearchOptions';
+import { useAppSelector } from '../../hooks';
+
+type SearchOptions = {
+  searchValue: string;
+  sortBy: string;
+  perPage: number;
+  currentPage: number;
+};
 
 export const HomePage = () => {
-  const { state } = useContext(AppContext);
-  const { searchValue, images, error, isLoading } = state;
+  const { searchValue, images, error, isLoading } = useAppSelector((state) => state.search);
 
   const searchValueRef = useRef('');
   searchValueRef.current = searchValue;
